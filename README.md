@@ -2,6 +2,12 @@
 User: A00398463@itesm.mx
 Password: Mu1995x*
 
+#Set Project
+#First Install packages
+npm install
+#Second run npm command
+npm start
+
 # Estrellaroja
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
