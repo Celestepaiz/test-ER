@@ -1,3 +1,7 @@
+#Credentials GIT REPO
+User: A00398463@itesm.mx
+Password: Mu1995x*
+
 # Estrellaroja
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
