@@ -9,15 +9,17 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 export class HomeComponent implements OnInit{
 	public titulo: string;
+  public asiento: string;
 
 	constructor(
 		private _route: ActivatedRoute,
 		private _router: Router
 	){
 		this.titulo = 'Home';
+    this.asiento = null;
 	}
 
 	ngOnInit(){
-		console.log('home.component cargado');
+		console.log('home.component.ts cargado');
 	}
 }
