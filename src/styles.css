@@ -69,7 +69,7 @@ width: 100%;
   height: 1240px;
 }
 
-label .asiento{
+.asiento{
     background: url('/assets/img/camion-asientoB-H.png') no-repeat;
     background-size: cover;
     width: 65px;
