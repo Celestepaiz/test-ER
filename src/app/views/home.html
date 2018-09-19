@@ -71,8 +71,155 @@
 
   <div class="row">
     <div class="col-md-12 bus-vertical">
-      <div class="col-md-1">
-          <label class="asiento">1</label>
+      <br><br><br><br><br><br><br><br><br>
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">1</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">2</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">3</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">4</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">5</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">6</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">7</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">8</label>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">9</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">10</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">11</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">12</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">13</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">14</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">15</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">16</label>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">17</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">18</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">19</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">20</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">21</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">22</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">23</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">24</label>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">25</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">26</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">27</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">28</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">29</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">30</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">31</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">32</label>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">33</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">34</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">35</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">36</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1 offset-md-2 col-lg-1 offset-lg-3 first-seats">
+            <label class="asiento">37</label>
+        </div>
+        <div class="col-md-1 second-seats">
+            <label class="asiento">38</label>
+        </div>
+        <div class="col-md-1 third-seats">
+            <label class="asiento">39</label>
+        </div>
+        <div class="col-md-1 fourth-seats">
+            <label class="asiento">40</label>
+        </div>
       </div>
     </div>
   </div>
@@ -83,10 +230,30 @@
       <h4 class="text-center">#{{asiento}}</h4>
     </div>
       <div class="col-md-12 text-center">
-        <button type="button" class="btn btn-primary">Siguiente</button>
+        <button (click)="showModal()" type="button" class="btn btn-primary">Siguiente</button>
       </div>
   </div>
   <br><br>
+
+  <div class="modal fade" #modal>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <header class="font-12 bold">Modal Header</header>
+                </div>
+                <div class="modal-body">
+                    Your Content ...
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </div>
 <!--footer-->
   <app-footer></app-footer>
