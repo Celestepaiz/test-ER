@@ -70,11 +70,45 @@ width: 100%;
 }
 
 .asiento{
-    background: url('/assets/img/camion-asientoB-H.png') no-repeat;
+    background: url('/assets/img/camion-asientoB-H90.png') no-repeat;
     background-size: cover;
-    width: 65px;
-    height: 50px;
+    width: 49px;
+    height: 66px;
     display: block;
     padding: 14px 29px 10px 20px;
     transition: all 0.5s;
+}
+
+.first-seats{
+  padding-left: 65px;
+}
+
+.second-seats{
+  padding-left: 50px;
+}
+
+.third-seats{
+  padding-left: 145px;
+}
+
+.fourth-seats{
+  padding-left: 50px;
+}
+
+@media (min-width: 1200px){
+  .first-seats{
+    padding-left: 105px;
+  }
+
+  .second-seats{
+    padding-left: 50px;
+  }
+
+  .third-seats{
+    padding-left: 145px;
+  }
+
+  .fourth-seats{
+    padding-left: 50px;
+  }
 }
