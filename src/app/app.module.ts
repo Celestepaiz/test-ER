@@ -9,15 +9,23 @@ import { routing, appRoutingProviders } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home.component';
+import { DondeLlegasComponent } from './donde-llegas/donde-llegas.component';
+import { ListComponent } from './list/list.component';
 import { NavbarComponent } from './components/navbar.component';
 import { FooterComponent } from './components/footer.component';
+import { AsientosComponent } from './asientos/asientos.component';
+import { PagoComponent } from './pago/pago.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    DondeLlegasComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ListComponent,
+    AsientosComponent,
+    PagoComponent
   ],
   imports: [
     BrowserModule,
