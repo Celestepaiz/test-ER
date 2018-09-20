@@ -1,0 +1,275 @@
+/* Seccipn de carga*/
+.loading-container2 {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  z-index: 9999999;
+}
+
+.loading-container2 .loading-logo {
+  position: absolute;
+  top: 25vh;
+  left: 50vh;
+  transform: translateX(-50%);
+}
+
+.loading-container2 .pulse {
+  border: 3px solid #148abd;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: pulsate s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  animation: pulsate 2s ease-out;
+  animation-iteration-count: infinite;
+  border-radius: 30px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    transform: scale(1.5, 1.5);
+    opacity: 0.0;
+  }
+}
+
+/*Fondo de rayas*/
+.fondo1{
+  margin-left: -15px;
+  margin-right: -15px;
+  background-image: url(/assets/img/ParallaxBack.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Clase que llama al fondo de la izquierda*/
+.portadaIzquierda {
+  position: relative;
+  display: inline-block;
+  max-width: 1000px;
+  height: 100vh;
+  min-width: 50vw;
+  padding-left: 0px;
+  padding-right: 0px;
+  transition: all 0.2s linear;
+  overflow: hidden;
+  background-image: url("../../assets/img/imagen-portada2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: right bottom;
+  vertical-align: bottom;
+  font-size: 50px;
+}
+
+/* Clase que llama al fondo derecho*/
+.portadaDerecha {
+  position: relative;
+  display: inline-block;
+  max-width: 1000px;
+  height: 100vh;
+  min-width: 50vw;
+  padding-left: 0px;
+  padding-right: -10px;
+  transition: all 0.2s linear;
+  overflow: hidden;
+  background-image: url("../../assets/img/imagen-portada.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left bottom;
+  vertical-align: bottom;
+  font-size: 50px;
+
+}
+
+.btn1 {
+  position: relative;
+  border: none;
+  background: rgba(57, 177, 228, 0.65);
+  color: #f2f2f2;
+  padding: 0.5em;
+  font-size: 0.5em;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50vh;
+  font-family: sans-serif;
+  overflow: hidden;
+
+}
+
+.btn1:hover {
+  background: rgba(0,0,0,0);
+  color: #f2f2f2;
+  box-shadow: inset 0 0 0 3px #3a7999;
+}
+.titulo{
+  font-size: 65px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: -83vh;
+  margin-bottom: 63vh;
+  font-family: sans-serif bold;
+  overflow: hidden;
+}
+.titulo h1{
+  color: white;
+  letter-spacing: 0.5em;
+  font-size: 0.5em;
+  overflow: hidden;
+}
+
+.titulo p{
+  color: white;
+  letter-spacing: 0.2em;
+  font-size: 0.4em;
+  overflow: hidden;
+}
+
+.modal-contenido{
+  background:  linear-gradient(to right, black 1%, black 93%, rgba(0, 0, 0, 0) 100%);
+  width: 60vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25vh;
+  position: relative;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  border: none;
+}
+
+#miModal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.sencillo{
+  background-image: url("/assets/img/viajesencillo.png");
+  background-repeat: no-repeat;
+  width: 6.5vh;
+  height: 3.5vh;
+  background-color: transparent !important;
+  outline: none;
+  border: none !important;
+}
+
+.sencilloDiv{
+  text-align: center;
+  color: white;
+}
+
+.redondo{
+  background-image: url("/assets/img/viajeredondo-off.png");
+  background-repeat: no-repeat;
+  width: 6.5vh;
+  height: 3.9vh;
+  background-color: transparent !important;
+  outline: none;
+  border: none !important;
+}
+
+.redondoDiv{
+  text-align: center;
+  color: white;
+}
+
+label{
+  color: white;
+}
+
+.llenado{
+  text-align: center;
+}
+/*Clase para la equis de cerrar el modal*/
+.close{
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+
+.divViaje{
+  text-align: center;
+  font-size: 40px;
+}
+
+.btnViaje {
+  background-color: #17a0db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  padding: 6px 12px;
+}
+
+
+select#viaje {
+  margin: 0.3vw;
+  width: 33vh;
+  color: #17a0db;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("/assets/img/down-arrow.png") 96% / 15% no-repeat #eee;
+}
+
+
+/* CAUTION: IE hackery ahead */
+select#viaje::-ms-expand {
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select#viaje {
+        background:none\9;
+        padding: 5px\9;
+    }
+}
+p{
+  color: white;
+}
+
+input#viaje {
+  margin: 0.3vw;
+  width: 33vh;
+  color: #17a0db;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
