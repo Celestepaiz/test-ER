@@ -1,57 +1,71 @@
 <app-navbar></app-navbar>
 <div id="container">
-    <header></header>
+  <header></header>
 
 
-      <section>
+  <section>
+    <br>
+    <h3>Código Promocional</h3><br>
+    <div class="container box" style="width:700px; margin:0 auto;">
+      <div class="row">
+        <div class="col">
+          <input type = "text" name = "CodigoProm" value="" style="width:250px; height: 40px; margin:0 auto;">
 
-        <h3>Codigo Promocional</h3>
-        <div class="container mt-2 col-md-12" style="width:600px; margin:0 auto;">
-          <div class="row">
-            <div class="col">
-              <input type = "text" name = "CodigoProm" value="">
             </div>
-            <div class="col">
-              <button type="button" class="btn btn-primary">Agregar</button>
-            </div>
-          </div>
+        <div class="col">
+          <button type="button" class="btn btn-outline-info" style="width:200px; float: right;" >Agregar</button>
         </div>
+      </div>
+    </div>
+    <br>
 
-        <div class="container-fluid mt-2 col-md-12" style="width:600px; margin:0 auto; border:3px solid #cecece;">
+    <div class="container box" style="width:700px; margin:0 auto; border:1px solid #cecece;">
 
-          <div class="row">
-            <div class="col">
-              <h6>Nombre: Jesus Castillo</h6>
-              <h6>Destino: Terminal 1 CDMX</h6>
-              <h6>Hora: 13:30</h6>
-            </div>
-            <div class="col ">
-              <h6 class ="lefty">Precio: $300</h6>
-            </div>
-          </div>
-
+      <div class="row">
+        <div class="col"><br>
+          <h5>Viernes 13 de Octubre del 2018 </h5>
+          <h6><b>Nombre:</b> Jesus Castillo </h6>
+          <h6><b>Origen:</b> Puebla</h6>
+          <h6><b>Destino:</b> Terminal 1 CDMX</h6>
+          <h6><b>Asiento:</b> 20</h6>
+          <h6><b>Hora:</b> 13:30</h6>
         </div>
-
-
-
-
-        <div class="container-fluid mt-2 col-md-12" style="width:600px; margin:0 auto; border:1px solid #cecece;">
-
-          <div class="row">
-            <div class="col">
-              <h6>Recomendaciones</h6>
-              <button type="button" class="btn btn-success btn-lg">Pagar</button>
-            </div>
-
-
-            <div class="container" style="border:0.5px solid #cecece;">
-
-            </div>
-
-          </div>
+        <div class="col "><br>
+          <h6 align="right">Precio: $300</h6>
+          <h6 align="right">Descuento: $0</h6><br><br><br>
+          <h5 align="right">Total: 300</h5>
 
         </div>
-      </section>
-  </div>
+      </div>
 
-  <app-footer></app-footer>
+    </div>
+    <br>
+
+
+    <div class="container box" style="width:700px; margin:0 auto; border:1px solid #cecece;">
+
+
+      <div class="row">
+        <div class="col"><br>
+          <h6>Recomendaciones</h6>
+          <p style="font-size:70%;" align="justify">- * Los campos son obligatorios.<br>
+        - Si compras boleto con descuento INAPAM, es necesario presentar una credencial vigente.<br>
+        - Si no estás registrado y deseas hacer un cambio o cancelación, sólo podrás hacerlo en ventanilla. Para hacerlo desde el sitio web hay que registrarse.<br>
+        - Puedes descargar nuestra App de Entretenimiento a bordo aquí y disfrútala durante tu viaje.</p>
+
+
+        </div>
+        <div class="col "><br>
+          <h6>Pagar con...</h6><br><br><br><br><br>
+          <button type="button" class="btn btn-outline-info" style="width:200px; float: right;">Pagar</button> <br><br>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</div>
+<br>
+
+<app-footer></app-footer>
