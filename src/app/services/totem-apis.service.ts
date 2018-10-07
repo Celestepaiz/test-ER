@@ -8,16 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class TotemApisService {
 
-  constructor(private _http: Http) { }
-
-  getExcelDataReferralsAndRecruiters(){
-		/*let headers = new Headers({
-			'Content-Type':'application/json'
-		});
-
-		let options = new RequestOptions({ headers: headers });
-		return this._http.get(this.url+'get-referrals-for-excel', options).pipe(map(res => res.json()));*/
-	}
+  constructor(private _http: Http) { }  
 
   getLogin(){
     let headers = new Headers({
@@ -27,16 +18,6 @@ export class TotemApisService {
     });
 
     let options = new RequestOptions({ headers: headers });
-
-    /*const sr =
-        `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mat="http://mathsutility.test.com/">
-           <soapenv:Header/>
-             <soapenv:Body>
-               <mat:carreNombre>
-                 <arg0>` + choosenNumberValue + `</arg0>
-               </mat:carreNombre>
-             </soapenv:Body>
-           </soapenv:Envelope>`;*/
 
     const postedData =
     `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://control/">
