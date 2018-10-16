@@ -6,13 +6,13 @@
 -->
 <app-navbar></app-navbar>
 <div class="container-fluid">
-	<div class="fondo1">	
+	<div class="fondo1">
 		<div class="row">
 			<div class="col-md-6 col-6 col-xl-6 portadaIzquierda">
-					<button (click)="pueblaShow();" class="btn1">Puebla</button>					
+					<button (click)="pueblaShow();" class="btn1">Puebla</button>
 			</div>
 			<div class="col-md-6 col-6 col-xl-6 portadaDerecha">
-					<button (click)="mexicoShow();" class="btn1">Aeropuerto CDMX</button>					
+					<button (click)="mexicoShow();" class="btn1">Aeropuerto CDMX</button>
 			</div>
 			<div class="col-md-12 col-xl-12 col-12 titulo">
 				<h1>¡Tu viaje comienza aquí!</h1>
@@ -30,7 +30,7 @@
   		<div class="col-2 col-md-2 col-xl-2">
   			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
   				<span aria-hidden="true">&times;</span>
-        	</button>	
+        	</button>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 sencilloDiv">
   			<button class="sencillo"></button>
@@ -43,18 +43,18 @@
   	</div>
   	<div class="row">
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<label>¿De dónde sales?</label>			
+  			<label>¿De dónde sales?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<select id="viaje">
   				<option value="4PTE">Terminal 4 Poniente PUE</option>
   				<option value="CAPU">Central CAPU PUE</option>
   				<option value="PSNDIEGO">Plaza San Diego Cholula PUE</option>
-  			</select> 
+  			</select>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿A dónde llegas?</label>
-  		</div>  
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<select id="viaje">
   				<option value="AERO">Aeropuerto T1 CDMX</option>
@@ -66,24 +66,24 @@
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<input type="date" id="viaje" name="" value="{{date}}">
-  		</div>    
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Qué día regresas?</label>
-  		</div> 
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<input type="date" id="viaje" name="" value="{{date}}">
-  		</div> 
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Cuántos viajan?</label>
-  		</div> 
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<input type="text" id="viaje" name="">
   		</div>
   		<div class="col-12 col-md-12 col-xl-12 divViaje">
   			<button data-dismiss="modal" [routerLink]="['/list']" class="btnViaje">Inicia tu viaje</button>
-  		</div>  		
+  		</div>
   	</div>
-  </div>  
+  </div>
 </div>
 
 
@@ -96,7 +96,7 @@
   		<div class="col-2 col-md-2 col-xl-2">
   			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
   				<span aria-hidden="true">&times;</span>
-        	</button>	
+        	</button>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 sencilloDiv">
   			<button class="sencillo"></button>
@@ -109,7 +109,7 @@
   	</div>
   	<div class="row">
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<label>¿De dónde sales?</label>			
+  			<label>¿De dónde sales?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<select id="viaje">
@@ -119,36 +119,36 @@
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿A dónde llegas?</label>
-  		</div>  
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<select id="viaje">
   				<option value="4PTE">Terminal 4 Poniente PUE</option>
   				<option value="CAPU">Central CAPU PUE</option>
   				<option value="PSNDIEGO">Plaza San Diego Cholula PUE</option>
-  			</select> 
+  			</select>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Qué día es tu viaje?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<input type="date" id="viaje" name="" value="{{date}}">
-  		</div>    
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Qué día regresas?</label>
-  		</div> 
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<input type="date" id="viaje" name="" value="{{date}}">
-  		</div> 
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Cuántos viajan?</label>
-  		</div> 
+  		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<input type="text" id="viaje" name="">
   		</div>
   		<div class="col-12 col-md-12 col-xl-12 divViaje">
   			<button data-dismiss="modal" [routerLink]="['/list']"  class="btnViaje">Inicia tu viaje</button>
-  		</div>  		
+  		</div>
   	</div>
-  </div>   
+  </div>
 </div>
 <app-footer></app-footer>

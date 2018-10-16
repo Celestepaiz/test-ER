@@ -1,13 +1,12 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from  '@angular/router';
-import { ActivatedRoute } from "@angular/router";
 
 //Aqui importaremos las rutas de los componentes
 import { HomeComponent } from './components/home.component';
 import { DondeLlegasComponent } from './donde-llegas/donde-llegas.component';
 import { ListComponent } from './list/list.component';
-import { AsientosComponent } from './asientos/asientos.component';
 import { PagoComponent } from './pago/pago.component';
+import { AsientosComponent } from './asientos/asientos.component';
 
 //Estas son las rutas de nuestro proyecto que agregaremos poco a poco
 const appRoutes: Routes = [
