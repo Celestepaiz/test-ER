@@ -1,81 +1,40 @@
 'use strict'
 
-const EasySoap = require('easysoap');
-var url = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService?wsdl';
+//const EasySoap = require('easysoap');
+const soapRequest = require('easy-soap-request');
+const fs = require('fs');
+//var url = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService?wsdl';
+var url = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService';
 
 function pruebas(req, res){
 
-	var requestArgs = {
-		canalVenta: 'TMS',
-		direccionIP: '189.203.101.114',
-		direccionMAC: 'A0:21:B7:A9:05:C0',
-		nombreCaja: 'CAJAWEB-ER',
-		nombreEquipo: 'CAJAWEB-ER',
-		sucursalClave: 'WEB',
-		usuarioContrasena: '123456',
-		usuarioNumero: '1010'
-	};
+	const headers = {
+  'user-agent': 'sampleTest',
+  'Content-Type': 'text/xml;charset=UTF-8',
+  'soapAction': 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService?wsdl#getLogin',
+};
 
-	const params = {
-	   host: 'http://187.210.68.147:8082',
-	   path: '/ER_WS_CONTROL/ERWSINFRAService',
-	   wsdl: '/ER_WS_CONTROL/ERWSINFRAService?wsdl'
-  }
+const xml = fs.readFileSync('./login.txt', 'utf-8');
 
-	var soapClient = EasySoap(params);
+// usage of module
+/*(async () => {
+  const { response } = await soapRequest(url, headers, xml);
+  const { body, statusCode } = response;
+  console.log(body);
+  console.log(statusCode);
+})();*/
 
-	soapClient.call({
-	   method    : 'getLogin',
-	   attributes: {
-	      xmlns: 'http://schemas.xmlsoap.org/soap/envelope/'
-	   },
-	   params: {
-			 parameters: {
-				 canalVenta: 'TMS',
-				 direccionIP: '189.203.101.114',
-				 direccionMAC: 'A0:21:B7:A9:05:C0',
-				 nombreCaja: 'CAJAWEB-ER',
-				 nombreEquipo: 'CAJAWEB-ER',
-				 sucursalClave: 'WEB',
-				 usuarioContrasena: '123456',
-				 usuarioNumero: '1010'
-			 } 
-	   }
-	})
-	.then((callResponse) => {
-	    console.log(callResponse.data);	// response data as json
-	    console.log(callResponse.body);	// response body
-	    console.log(callResponse.header);  //response header
-			res.status(200).send({
-	 			 message: 'Probando una acción del controlador de usuarios del api rest con Node y Mongo'
-	 		 });
-	})
-	.catch((err) => {
+soapRequest(url, headers, xml)
+ .then((response) => {
+	 console.log(response);
+	 res.status(200).send({
+		 response
+	 });
+ })
+ .catch((err) => {
 
-	});
+ });
 
-	/*soapClient.getMethodParamsByName('getLogin')
-   .then((methodParams) => {
-      console.log(methodParams.request);
-      console.log(methodParams.response);
-			res.status(200).send({
-	 			 message: 'Probando una acción del controlador de usuarios del api rest con Node y Mongo'
-	 		 });
-    })
-    .catch((err) => {
-
-		});*/
-
-	/*soapClient.getAllFunctions()
-   .then((functionArray) => {
-		 console.log(functionArray);
-		 res.status(200).send({
-			 message: 'Probando una acción del controlador de usuarios del api rest con Node y Mongo'
-		 });
-	 })
-   .catch((err) => {
-
-	 });*/
 }
 
 module.exports = {
