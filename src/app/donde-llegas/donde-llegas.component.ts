@@ -17,13 +17,17 @@ export class DondeLlegasComponent implements OnInit {
 	@ViewChild('muestraMex') mexico: ElementRef;
 
 
-	constructor(private _totemService: TotemApisService) { }
+	constructor(
+    private _totemService: TotemApisService
+  ) {
+      
+  }
 
   	ngOnInit() {
-      this.soapCall();
+      //this.iniciarSesion();
   	}
 
-    soapCall() {
+    /*soapCall() {
       const xmlhttp = new XMLHttpRequest();
       xmlhttp.open('POST', 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService?wsdl', true);
       //const input_element = <HTMLInputElement> document.getElementById('choosenNumber');
@@ -66,7 +70,7 @@ export class DondeLlegasComponent implements OnInit {
       xmlhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
       xmlhttp.responseType = 'document';
       xmlhttp.send(sr);
-    }
+    }*/
 
     iniciarSesion(){
       this._totemService.getLoginPrueba().subscribe(

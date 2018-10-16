@@ -34,7 +34,7 @@ import { FooterComponent } from './components/footer.component';
     HttpClientModule,
     HttpModule,
     routing,
-    FormsModule
+    FormsModule    
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent],
