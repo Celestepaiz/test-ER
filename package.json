@@ -28,6 +28,7 @@
     "moment": "^2.22.2",
     "nodemon": "^1.18.4",
     "rxjs": "^6.0.0",
+    "xml-js": "^1.6.8",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

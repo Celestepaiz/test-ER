@@ -3,10 +3,13 @@
 //const EasySoap = require('easysoap');
 const soapRequest = require('easy-soap-request');
 const fs = require('fs');
+const convert = require('xml-js');
 //var url = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService?wsdl';
 var url = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService';
 
+
 function pruebas(req, res){
+  
 
 	const headers = {
   'user-agent': 'sampleTest',
@@ -34,12 +37,18 @@ const xml = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/en
 
 soapRequest(url, headers, xml)
  .then((response) => {
-	 console.log(response);
+   console.log(response.response.body);
+   const xmlres = response.response.body
+   const result = convert.xml2json(xmlres, {compact: false, alwaysArray: true});
+
+   console.log(result)
+   
 	 res.status(200).send({
 		 response
 	 });
  })
  .catch((err) => {
+   console.log(err)
 
  });
 
