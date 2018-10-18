@@ -8,8 +8,8 @@ var app = express();
 // cargar rutas
 var user_routes = require('./server/routes/index');
 
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true, limit: '50mb'}));
+app.use(bodyParser.json({limit: '50mb'}));
 
 // configurar cabeceras http
 app.use((req, res, next) => {
