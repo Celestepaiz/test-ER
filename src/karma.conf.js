@@ -3,8 +3,8 @@
 
 module.exports = function (config) {
 
-  console.log("holaaa")
-  console.log("test")
+//  console.log("holaaa")
+ // console.log("test")
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
