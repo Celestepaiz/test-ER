@@ -67,7 +67,7 @@ export class ListComponent implements OnInit {
   consultaCorridas(redondo: boolean){
     if(!redondo){
       //Fecha en este formato ---> 2018-09-05T00:00:00
-      let myFecha = formatDate(this.fechaSalida, 'yyyy-MM-ddT00:00:00', 'en-US', '+0530');
+      let myFecha = formatDate(this.fechaSalida, 'yyyy-MM-ddT00:00:00', 'en-US');
       let body = {
       	salida: this.salida,
         llegada: this.llegada,
@@ -111,7 +111,7 @@ export class ListComponent implements OnInit {
         y la segunda para obtener las corridas de vuelta*/
 
       //Fecha en este formato ---> 2018-09-05T00:00:00
-      let myFechaSalida = formatDate(this.fechaSalida, 'yyyy-MM-ddT00:00:00', 'en-US', '+0530');
+      let myFechaSalida = formatDate(this.fechaSalida, 'yyyy-MM-ddT00:00:00', 'en-US');
       let bodySalida = {
       	salida: this.salida,
         llegada: this.llegada,
@@ -119,7 +119,7 @@ export class ListComponent implements OnInit {
       	fecha: myFechaSalida
       };
 
-      let myFechaRegreso = formatDate(this.fechaRegreso, 'yyyy-MM-ddT00:00:00', 'en-US', '+0530');
+      let myFechaRegreso = formatDate(this.fechaRegreso, 'yyyy-MM-ddT00:00:00', 'en-US');
       let bodyVuelta = {
       	salida: this.salida,
         llegada: this.llegada,
@@ -127,6 +127,18 @@ export class ListComponent implements OnInit {
       	fecha: myFechaRegreso
       };
     }
+  }
+
+  sendCorrida(claveViaje: string){
+    let myFecha = formatDate(this.fechaSalida, 'yyyy-MM-ddT00:00:00', 'en-US');    
+    this._router.navigate(['asientos'], {
+      queryParams: {
+        salida: this.salida,
+        llegada: this.llegada,
+        fech: myFecha,
+        clave: claveViaje   
+      }
+    });
   }
 
 }

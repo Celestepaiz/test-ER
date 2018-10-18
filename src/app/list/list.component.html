@@ -2,9 +2,14 @@
 <div class="container box">
 
     <div class="row">
-      <div class="col-md-12 text-center">
+      <div class="col-md-6 text-center">
         <button [disabled]="!loading" [routerLink]="['/donde-llegas']" type="button" class="btn btn-primary btn-lg">Regresar</button>
         <br><br><br>
+      </div>
+
+      <div class="col-md-6 text-center">          
+          <button [disabled]="!loading" [routerLink]="['/donde-llegas']" type="button" class="btn btn-danger btn-lg">Salir</button>
+          <br><br><br>
       </div>
     </div>
 
@@ -60,7 +65,7 @@
                     <p class="hora"> {{corrida.descripcionOrigeSolicitado}}</p>
                 </div>
                 <div class="col-md-3 d-flex justify-content-center align-self-center d-flex mx-auto">
-                    <p class="txt-blue"> Tarifa </p>   <button [routerLink]="['/asientos']" type="button" class="btn btn-outline-info"> $300 </button>
+                    <p class="txt-blue"> Tarifa </p>   <button (click)="sendCorrida(corrida.claveCorrida)" type="button" class="btn btn-outline-info"> $300 </button>
                 </div>
             </div>
             <div class="row">
