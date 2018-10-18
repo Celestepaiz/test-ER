@@ -1,0 +1,17 @@
+/*@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+You can add global styles to this file, and also import other style files */
+
+
+h3 {
+  text-align: center;
+}
+
+h2.lefty{
+  text-align: left;
+}
+
+
+body {
+  padding-top: 230px;
+}

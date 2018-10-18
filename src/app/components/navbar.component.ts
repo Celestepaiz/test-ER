@@ -1,25 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
+declare var M:any;
+
 @Component({
-  selector: 'app-home',
-  templateUrl: '../views/home.html',
+  selector: 'app-navbar',
+  templateUrl: '../views/navbar.html',
   providers: []
 })
 
-export class HomeComponent implements OnInit{
+export class NavbarComponent implements OnInit{
 	public titulo: string;
-  public asiento: string;
+	public identity;
+	public errorMessage;
+	public alertRegister;
+
+
 
 	constructor(
 		private _route: ActivatedRoute,
 		private _router: Router
 	){
-		this.titulo = 'Home';
-    this.asiento = null;
+		this.titulo = 'Nav Bar';
 	}
 
+
 	ngOnInit(){
-		console.log('home.component.ts cargado');
+
 	}
+  
+  logout(){
+  }
 }
