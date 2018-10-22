@@ -175,6 +175,17 @@
   border: none !important;
 }
 
+.sencillo:hover{
+  background-image: url("/assets/img/viajesencillo-on.png");
+  background-repeat: no-repeat;
+  width: 6.5vh;
+  height: 3.5vh;
+  background-color: transparent !important;
+  outline: none;
+  border: none !important;
+  cursor: pointer;
+}
+
 .sencilloDiv{
   text-align: center;
   color: white;
@@ -188,6 +199,17 @@
   background-color: transparent !important;
   outline: none;
   border: none !important;
+}
+
+.redondo:hover{
+  background-image: url("/assets/img/viajeredondo-on.png");
+  background-repeat: no-repeat;
+  width: 6.5vh;
+  height: 3.9vh;
+  background-color: transparent !important;
+  outline: none;
+  border: none !important;
+  cursor: pointer;
 }
 
 .redondoDiv{
@@ -246,7 +268,7 @@ select#viaje {
 
 
 /* CAUTION: IE hackery ahead */
-select#viaje::-ms-expand { 
+select#viaje::-ms-expand {
     display: none; /* remove default arrow on ie10 and ie11 */
 }
 
@@ -255,7 +277,7 @@ select#viaje::-ms-expand {
     select#viaje {
         background:none\9;
         padding: 5px\9;
-    } 
+    }
 }
 p{
   color: white;

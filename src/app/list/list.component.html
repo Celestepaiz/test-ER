@@ -1,59 +1,85 @@
-<app-navbar></app-navbar>
 <div class="container box">
-    <div class="list-group">
-        <div  class="list-group-item list-group-item-action">
+
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <button [disabled]="!loading" [routerLink]="['/donde-llegas']" type="button" class="btn btn-primary btn-lg">Regresar</button>
+        <br><br><br>
+      </div>
+
+      <div class="col-md-6 text-center">
+          <button [disabled]="!loading" [routerLink]="['/donde-llegas']" type="button" class="btn btn-danger btn-lg">Salir</button>
+          <br><br><br>
+      </div>
+    </div>
+
+    <div *ngIf="!loading" class="card text-center">
+      <div class="card-header">
+        Estrella Roja
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <br><br><br><br>
+            <h1 class="display-4">Preparando tu viaje</h1>
+            <div class="lds-hourglass"></div>
+            <p class="h5">Cargando destinos</p>
+            <br><br><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        Aeropuerto
+      </div>
+    </div>
+
+    <div *ngIf="noCorridas" class="card text-center">
+      <div class="card-header">
+        Estrella Roja
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <br><br><br><br>
+            <h1 class="display-5">¡Lo sentimos!</h1>
+            <p class="h4">No hay corridas disponibles</p>
+            <br><br><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        Aeropuerto
+      </div>
+    </div>
+
+    <div *ngIf="loading" class="list-group">
+        <div *ngFor="let corrida of corridasIda"  class="list-group-item list-group-item-action">
             <div class="row">
-                <div class="col-md-4 align-self-center">
-                 <p class="txt-blue">Hora salida</p> 
+                <div class="col-md-3 align-self-center">
+                 <p class="txt-blue">Hora salida</p>
                 </div>
-                <div class="col-md-4 align-self-center">
-                    <p class="hora"> 22:00 hrs.</p>
+                <div class="col-md-3 align-self-center">
+                    <p class="hora"> {{corrida.fechaHoraSalida | date:'shortTime'}}</p>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center align-self-center d-flex mx-auto">
-                    <p class="txt-blue"> Tarifa</p>   <button [routerLink]="['/asientos']" type="button" class="btn btn-outline-info">  $300  </button>        
+                <div class="col-md-3 align-self-center">
+                    <p class="hora"> {{corrida.descripcionOrigeSolicitado}}</p>
+                </div>
+                <div class="col-md-3 d-flex justify-content-center align-self-center d-flex mx-auto">
+                    <p class="txt-blue"> Tarifa </p>   <button (click)="sendCorrida(corrida.claveCorrida)" type="button" class="btn btn-outline-info"> $300 </button>
                 </div>
             </div>
-        </div>
-        <div  class="list-group-item list-group-item-action">
             <div class="row">
-                <div class="col-md-4">
-                 <p class="txt-blue align-self-center">Hora salida</p> 
+                <div class="col-md-3 align-self-center">
+                 <p class="txt-blue">Disponibles</p>
                 </div>
-                <div class="col-md-4 align-self-center">
-                    <p class="hora"> 23:00 hrs.</p>
+                <div class="col-md-3 align-self-center">
+                    <p class="hora"> {{corrida.pasajerosDisponibles}}</p>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center align-self-center d-flex mx-auto">
-                    <p class="txt-blue"> Tarifa</p>   <button [routerLink]="['/asientos']" type="button" class="btn btn-outline-info">  $300  </button>        
-                </div>
-            </div>
-        </div>
-        <div  class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-md-4 align-self-center">
-                 <p class="txt-blue ">Hora salida</p> 
-                </div>
-                <div class="col-md-4 align-self-center">
-                    <p class="hora"> 00:00 hrs.</p>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center align-self-center d-flex mx-auto">
-                    <p class="txt-blue"> Tarifa</p>   <button [routerLink]="['/asientos']" type="button" class="btn btn-outline-info">  $300  </button>        
-                </div>
-            </div>
-        </div>
-        <div  class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-md-4 align-self-center">
-                 <p class="txt-blue">Hora salida</p> 
-                </div>
-                <div class="col-md-4 align-self-center">
-                    <p class="hora"> 07:00 hrs.</p>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center align-self-center d-flex mx-auto">
-                    <p class="txt-blue"> Tarifa</p>   <button [routerLink]="['/asientos']" type="button" class="btn btn-outline-info">  $300  </button>        
+                <div class="col-md-3 align-self-center">
+                    <p class="hora"> {{corrida.descripcionDestinoSolicitado}}</p>
                 </div>
             </div>
         </div>
       </div>
-  
+
 </div>
 <app-footer></app-footer>
