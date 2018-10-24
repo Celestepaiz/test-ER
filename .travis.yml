@@ -5,4 +5,3 @@
   - "8"
 'install':
   - npm install
-'script': gulp 
