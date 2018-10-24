@@ -1,4 +1,4 @@
 
-gulp.task('travis,' ['build', 'test'], function(){
+gulp.task('travis,'['build', 'test'], function () {
     process.exit(0);
 });
