@@ -5,3 +5,5 @@
   - "8"
 'install':
   - npm install
+'addons':
+  'chrome': stable
