@@ -6,15 +6,7 @@
 -->
 <div class="container-fluid">
 	<div class="fondo1">
-		<div class="row justify-content-center">
-
-
-				<div *ngIf="alertRegister" class="col-8 col-md-8 col-xl-8 text-center">
-					<div class="alert alert-danger fade show" role="alert">
-					  <strong>¡Error!</strong> {{alertRegister}}
-					</div>
-				</div>
-
+		<div class="row">
 			<div class="col-md-6 col-6 col-xl-6 portadaIzquierda">
 					<button (click)="pueblaShow();" class="btn1">Puebla</button>
 			</div>
@@ -40,11 +32,11 @@
         	</button>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 sencilloDiv">
-  			<button (click)='setTipoViaje(false)' class="sencillo"></button>
+  			<button class="sencillo"></button>
   			<p>Sencillo</p>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 redondoDiv">
-  			<button (click)='setTipoViaje(true)' class="redondo"></button>
+  			<button class="redondo"></button>
   			<p>Redondo</p>
   		</div>
   	</div>
@@ -53,45 +45,41 @@
   			<label>¿De dónde sales?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<select [(ngModel)]="selectedValuePueblaDondeSales" id="viaje">
-  				<option *ngFor="let option of optionsPueblaDondeSales" selected="option.name == 'Aeropuerto T1 CDMX'" [value]="option.value">{{option.name}}</option>
-  				<!--<option value="CAPU">Central CAPU PUE</option>value="4PTE"
-  				<option value="PSNDIEGO">Plaza San Diego Cholula PUE</option>-->
+  			<select id="viaje">
+  				<option value="4PTE">Terminal 4 Poniente PUE</option>
+  				<option value="CAPU">Central CAPU PUE</option>
+  				<option value="PSNDIEGO">Plaza San Diego Cholula PUE</option>
   			</select>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿A dónde llegas?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<select [(ngModel)]="selectedValuePueblaDondeLlegas" id="viaje">
-  				<option *ngFor="let option of optionsPueblaDondeLlegas" [value]="option.value">{{option.name}}</option>
-  				<!--<option value="AEROT2">Aeropuerto T2 CDMX</option>-->
+  			<select id="viaje">
+  				<option value="AERO">Aeropuerto T1 CDMX</option>
+  				<option value="AEROT2">Aeropuerto T2 CDMX</option>
   			</select>
   		</div>
-
-			<div class="col-12 col-md-6 col-xl-6 llenado">
+  		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Qué día es tu viaje?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<input id="viaje" [ngModel]="todayDatePuebla | date:'yyyy-MM-dd'" (ngModelChange)="todayDatePuebla = $event" type="date" name="todayDatePuebla">
+  			<input type="date" id="viaje" name="" value="{{date}}">
   		</div>
-
-			<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
+  		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Qué día regresas?</label>
   		</div>
-  		<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
-  			<input id="viaje" [ngModel]="todayDatePueblaRegreso | date:'yyyy-MM-dd'" (ngModelChange)="todayDatePueblaRegreso = $event" type="date" name="todayDatePueblaRegreso">
+  		<div class="col-12 col-md-6 col-xl-6 llenado">
+  			<input type="date" id="viaje" name="" value="{{date}}">
   		</div>
-
-			<div class="col-12 col-md-6 col-xl-6 llenado">
+  		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Cuántos viajan?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<input type="text" id="viaje" name="">
+  			<input type="number" min="1" max="5" id="viaje" value="1" name="">
   		</div>
-
-			<div class="col-12 col-md-12 col-xl-12 divViaje">
-  			<button data-dismiss="modal" (click)="checkValuesPuebla()" class="btnViaje">Inicia tu viaje</button>
+  		<div class="col-12 col-md-12 col-xl-12 divViaje">
+  			<button data-dismiss="modal" [routerLink]="['/list']" class="btnViaje">Inicia tu viaje</button>
   		</div>
   	</div>
   </div>
@@ -110,11 +98,11 @@
         	</button>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 sencilloDiv">
-  			<button (click)='setTipoViaje(false)' class="sencillo"></button>
+  			<button class="sencillo"></button>
   			<p>Sencillo</p>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 redondoDiv">
-  			<button (click)='setTipoViaje(true)' class="redondo"></button>
+  			<button class="redondo"></button>
   			<p>Redondo</p>
   		</div>
   	</div>
@@ -123,38 +111,41 @@
   			<label>¿De dónde sales?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<select [(ngModel)]="selectedValueMexicoDondeSales" id="viaje">
-  				<option *ngFor="let option of optionsMexicoDondeSales" [value]="option.value">{{option.name}}</option>
+  			<select id="viaje">
+  				<option value="AERO">Aeropuerto T1 CDMX</option>
+  				<option value="AEROT2">Aeropuerto T2 CDMX</option>
   			</select>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿A dónde llegas?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<select [(ngModel)]="selectedValueMexicoDondeLlegas" id="viaje">
-  				<option *ngFor="let option of optionsMexicoDondeLlegas" [value]="option.value">{{option.name}}</option>
+  			<select id="viaje">
+  				<option value="4PTE">Terminal 4 Poniente PUE</option>
+  				<option value="CAPU">Central CAPU PUE</option>
+  				<option value="PSNDIEGO">Plaza San Diego Cholula PUE</option>
   			</select>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Qué día es tu viaje?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<input id="viaje" [ngModel]="todayDateMexico | date:'yyyy-MM-dd'" (ngModelChange)="todayDateMexico = $event" type="date" name="todayDateMexico">
+  			<input type="date" id="viaje" name="" value="{{date}}">
   		</div>
-  		<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
+  		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Qué día regresas?</label>
   		</div>
-  		<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
-  			<input id="viaje" [ngModel]="todayDateMexicoRegreso | date:'yyyy-MM-dd'" (ngModelChange)="todayDateMexicoRegreso = $event" type="date" name="todayDateMexicoRegreso">
+  		<div class="col-12 col-md-6 col-xl-6 llenado">
+  			<input type="date" id="viaje" name="" value="{{date}}">
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Cuántos viajan?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<input type="text" id="viaje" name="">
+				<input type="number" min="1" max="5" id="viaje" value="1" name="">
   		</div>
   		<div class="col-12 col-md-12 col-xl-12 divViaje">
-  			<button data-dismiss="modal" (click)="checkValuesMexico()"  class="btnViaje">Inicia tu viaje</button>
+  			<button data-dismiss="modal" [routerLink]="['/list']"  class="btnViaje">Inicia tu viaje</button>
   		</div>
   	</div>
   </div>
