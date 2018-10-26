@@ -19,6 +19,7 @@ import { NavbarComponent } from './components/navbar.component';
 import { FooterComponent } from './components/footer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,15 +29,17 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AsientosComponent,
     PagoComponent,
     NavbarComponent,
+
     FooterComponent,
     LandingPageComponent
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpModule,
     routing,
-    FormsModule
+    FormsModule    
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent],

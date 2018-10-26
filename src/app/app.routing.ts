@@ -10,6 +10,7 @@ import { AsientosComponent } from './asientos/asientos.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
+
 //Estas son las rutas de nuestro proyecto que agregaremos poco a poco
 const appRoutes: Routes = [
 	{path: 'home', component: HomeComponent },

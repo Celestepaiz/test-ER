@@ -175,6 +175,17 @@
   border: none !important;
 }
 
+.sencillo:hover{
+  background-image: url("/assets/img/viajesencillo-on.png");
+  background-repeat: no-repeat;
+  width: 6.5vh;
+  height: 3.5vh;
+  background-color: transparent !important;
+  outline: none;
+  border: none !important;
+  cursor: pointer;
+}
+
 .sencilloDiv{
   text-align: center;
   color: white;
@@ -188,6 +199,17 @@
   background-color: transparent !important;
   outline: none;
   border: none !important;
+}
+
+.redondo:hover{
+  background-image: url("/assets/img/viajeredondo-on.png");
+  background-repeat: no-repeat;
+  width: 6.5vh;
+  height: 3.9vh;
+  background-color: transparent !important;
+  outline: none;
+  border: none !important;
+  cursor: pointer;
 }
 
 .redondoDiv{

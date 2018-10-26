@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Celestepaiz/test-ER.svg?branch=master)](https://travis-ci.org/Celestepaiz/test-ER)
+
 #Credentials GIT REPO
 User: A00398463@itesm.mx
 Password: Mu1995x*
