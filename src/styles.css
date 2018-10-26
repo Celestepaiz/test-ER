@@ -142,6 +142,18 @@ width: 100%;
 }
 
 .video{
-  width: 1080px;
-  height: 607px;
+  width: 100vw;
+  height: 80vh;
+}
+
+/*Fondo de rayas*/
+.fondo1{
+  margin-left: -15px;
+  margin-right: -15px;
+  background-image: url(/assets/img/ParallaxBack.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
 }
