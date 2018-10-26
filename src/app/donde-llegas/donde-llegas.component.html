@@ -40,11 +40,11 @@
         	</button>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 sencilloDiv">
-  			<button (click)='setTipoViaje(false)' class="sencillo"></button>
+  			<button (click)='setTipoViajeIda(true);setTipoViajeRedondo(false);' class="sencillo"></button>
   			<p>Sencillo</p>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 redondoDiv">
-  			<button (click)='setTipoViaje(true)' class="redondo"></button>
+  			<button (click)='setTipoViajeRedondo(true);setTipoViajeIda(false);' class="redondo"></button>
   			<p>Redondo</p>
   		</div>
   	</div>
@@ -69,18 +69,18 @@
   			</select>
   		</div>
 
-			<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<label>¿Qué día es tu viaje?</label>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<input id="viaje" [ngModel]="todayDatePuebla | date:'yyyy-MM-dd'" (ngModelChange)="todayDatePuebla = $event" type="date" name="todayDatePuebla">
-  		</div>
+      <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 llenado">
+        <label>¿Qué día es tu viaje?</label>
+      </div>
+      <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 llenado" >
+        <input id="viaje" name="todayDatePuebla" type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="todayDatePuebla" [minDate]="todayDatePuebla">
+      </div>
 
 			<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
-  			<label>¿Qué día regresas?</label>
+  			<label>Selecciona ida y regreso</label>
   		</div>
   		<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
-  			<input id="viaje" [ngModel]="todayDatePueblaRegreso | date:'yyyy-MM-dd'" (ngModelChange)="todayDatePueblaRegreso = $event" type="date" name="todayDatePueblaRegreso">
+  			<input id="viaje" type="text" name="todayDatePueblaRegreso" [minDate]="todayDatePuebla" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
   		</div>
 
 			<div class="col-12 col-md-6 col-xl-6 llenado">
@@ -110,11 +110,11 @@
         	</button>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 sencilloDiv">
-  			<button (click)='setTipoViaje(false)' class="sencillo"></button>
+  			<button (click)='setTipoViajeIda(true);setTipoViajeRedondo(false);' class="sencillo"></button>
   			<p>Sencillo</p>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 redondoDiv">
-  			<button (click)='setTipoViaje(true)' class="redondo"></button>
+  			<button (click)='setTipoViajeRedondo(true);setTipoViajeIda(false);' class="redondo"></button>
   			<p>Redondo</p>
   		</div>
   	</div>
@@ -135,18 +135,19 @@
   				<option *ngFor="let option of optionsMexicoDondeLlegas" [value]="option.value">{{option.name}}</option>
   			</select>
   		</div>
-  		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<label>¿Qué día es tu viaje?</label>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6 llenado">
-  			<input id="viaje" [ngModel]="todayDateMexico | date:'yyyy-MM-dd'" (ngModelChange)="todayDateMexico = $event" type="date" name="todayDateMexico">
-  		</div>
-  		<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
-  			<label>¿Qué día regresas?</label>
-  		</div>
-  		<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
-  			<input id="viaje" [ngModel]="todayDateMexicoRegreso | date:'yyyy-MM-dd'" (ngModelChange)="todayDateMexicoRegreso = $event" type="date" name="todayDateMexicoRegreso">
-  		</div>
+      <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 llenado">
+        <label>¿Qué día es tu viaje?</label>
+      </div>
+      <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 llenado" >
+        <input id="viaje" name="todayDateMexico" type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="todayDateMexico" [minDate]="todayDateMexico">
+      </div>
+
+      <div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
+        <label>Selecciona ida y regreso</label>
+      </div>
+      <div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
+        <input id="viaje" type="text" name="todayDateMexicoRegreso" [minDate]="todayDateMexico" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+      </div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Cuántos viajan?</label>
   		</div>
