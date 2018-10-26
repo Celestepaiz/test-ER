@@ -18,6 +18,8 @@ import { AsientosComponent } from './asientos/asientos.component';
 import { NavbarComponent } from './components/navbar.component';
 import { FooterComponent } from './components/footer.component';
 
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { FooterComponent } from './components/footer.component';
     HttpClientModule,
     HttpModule,
     routing,
-    FormsModule    
+    FormsModule,
+    BsDatepickerModule.forRoot()  
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent],
