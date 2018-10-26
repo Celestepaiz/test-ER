@@ -4,6 +4,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { TotemApisService } from '../services/totem-apis.service';
 
 declare let $:any;
+declare let jQuery:any;
 
 @Component({
   selector: 'app-donde-llegas',
@@ -12,7 +13,7 @@ declare let $:any;
 })
 export class DondeLlegasComponent implements OnInit {
 
-	//date = fecha;
+
   public identity;
   public errorMessage;
 	public alertRegister;
@@ -22,12 +23,16 @@ export class DondeLlegasComponent implements OnInit {
   public selectedValueMexicoDondeLlegas;
 
   public valueRedondo: boolean;
+  public valueIda: boolean = true;
 
   public todayDatePuebla = new Date();
   public todayDateMexico = new Date();
 
   public todayDatePueblaRegreso = new Date();
   public todayDateMexicoRegreso = new Date();
+
+  bsRangeValue: Date[];
+
 
   optionsPueblaDondeLlegas = [
     {
@@ -90,7 +95,8 @@ export class DondeLlegasComponent implements OnInit {
 		private _router: Router,
     private _totemService: TotemApisService
   ) {
-
+    this.todayDatePueblaRegreso.setDate(this.todayDatePueblaRegreso.getDate() + 7);
+    this.bsRangeValue = [this.todayDatePuebla, this.todayDatePueblaRegreso];
   }
 
   	ngOnInit() {
@@ -191,9 +197,14 @@ export class DondeLlegasComponent implements OnInit {
       }
     }
 
-    setTipoViaje(value: boolean){
+    setTipoViajeIda(value: boolean){
+      this.valueIda = value;
+    }
+
+    setTipoViajeRedondo(value: boolean){
       this.valueRedondo = value;
     }
+
 
     logout(){
 	  	localStorage.removeItem('myID');
@@ -209,6 +220,7 @@ export class DondeLlegasComponent implements OnInit {
   	mexicoShow(){
   		$(this.mexico.nativeElement).modal('show');
   	}
+
 
   	//var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
   	//var f=new Date();
