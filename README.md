@@ -1,6 +1,3 @@
-#Credentials GIT REPO
-User: A00398463@itesm.mx
-Password: Mu1995x*
 
 #Set Project
 #First Install packages
