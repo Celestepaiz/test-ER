@@ -110,11 +110,19 @@
         	</button>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 sencilloDiv">
+<<<<<<< HEAD
   			<button (click)='setTipoViajeIda(true);setTipoViajeRedondo(false);' class="sencillo"></button>
   			<p>Sencillo</p>
   		</div>
   		<div class="col-6 col-md-6 col-xl-6 redondoDiv">
   			<button (click)='setTipoViajeRedondo(true);setTipoViajeIda(false);' class="redondo"></button>
+=======
+  			<button (click)='setTipoViaje(false)' class="sencillo"></button>
+  			<p>Sencillo</p>
+  		</div>
+  		<div class="col-6 col-md-6 col-xl-6 redondoDiv">
+  			<button (click)='setTipoViaje(true)' class="redondo"></button>
+>>>>>>> c57c71cf57ef36a0583a95554390eb0cb444f22c
   			<p>Redondo</p>
   		</div>
   	</div>
@@ -135,6 +143,7 @@
   				<option *ngFor="let option of optionsMexicoDondeLlegas" [value]="option.value">{{option.name}}</option>
   			</select>
   		</div>
+<<<<<<< HEAD
       <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 llenado">
         <label>¿Qué día es tu viaje?</label>
       </div>
@@ -148,11 +157,29 @@
       <div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
         <input id="viaje" type="text" name="todayDateMexicoRegreso" [minDate]="todayDateMexico" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
       </div>
+=======
+  		<div class="col-12 col-md-6 col-xl-6 llenado">
+  			<label>¿Qué día es tu viaje?</label>
+  		</div>
+  		<div class="col-12 col-md-6 col-xl-6 llenado">
+  			<input id="viaje" [ngModel]="todayDateMexico | date:'yyyy-MM-dd'" (ngModelChange)="todayDateMexico = $event" type="date" name="todayDateMexico">
+  		</div>
+  		<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
+  			<label>¿Qué día regresas?</label>
+  		</div>
+  		<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 llenado">
+  			<input id="viaje" [ngModel]="todayDateMexicoRegreso | date:'yyyy-MM-dd'" (ngModelChange)="todayDateMexicoRegreso = $event" type="date" name="todayDateMexicoRegreso">
+  		</div>
+>>>>>>> c57c71cf57ef36a0583a95554390eb0cb444f22c
   		<div class="col-12 col-md-6 col-xl-6 llenado">
   			<label>¿Cuántos viajan?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 llenado">
+<<<<<<< HEAD
   			<input type="number" min="1" max="5" id="viaje" value="1" name="">
+=======
+  			<input type="text" id="viaje" name="">
+>>>>>>> c57c71cf57ef36a0583a95554390eb0cb444f22c
   		</div>
   		<div class="col-12 col-md-12 col-xl-12 divViaje">
   			<button data-dismiss="modal" (click)="checkValuesMexico()"  class="btnViaje">Inicia tu viaje</button>

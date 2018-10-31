@@ -13,7 +13,6 @@ declare let jQuery:any;
 })
 export class DondeLlegasComponent implements OnInit {
 
-
   public identity;
   public errorMessage;
 	public alertRegister;
@@ -220,7 +219,6 @@ export class DondeLlegasComponent implements OnInit {
   	mexicoShow(){
   		$(this.mexico.nativeElement).modal('show');
   	}
-
 
   	//var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
   	//var f=new Date();
