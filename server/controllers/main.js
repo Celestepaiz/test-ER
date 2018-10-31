@@ -76,14 +76,6 @@ function getCorridas(req, res){
 	      </con:getCorridas>
 	   </soapenv:Body>`;
 
-		 /*console.log('Success');
-		 const jsonResult = convert.xml2json(response.response.body, {compact: true, spaces: 0});
-		 //console.log(jsonResult._declaration);
-		 //console.log(response.response.body);
-		 const json = JSON.parse(jsonResult);
-		 const sesionID = (json['S:Envelope']['S:Body']['ns2:getLoginResponse']['return']['sesionId']['_text']);
-		 res.status(200).send({sesionID});*/
-
 	soapRequest(url, headers, xml)
 	 .then((response) => {
 		 console.log(xml);
@@ -147,7 +139,7 @@ function getOrigenesDestinosEr(req, res){
   })
   .catch((err) => {
     console.log(err)
-  
+
   });
 }
 
@@ -197,7 +189,7 @@ function getBloquearAsientos(req, res){
   })
   .catch((err) => {
     console.log(err)
-  
+
   });
 }
 
@@ -251,7 +243,7 @@ function getOrigenesDestinosEr(req, res){
   })
   .catch((err) => {
     console.log(err)
-  
+
   });
 }
 
@@ -389,15 +381,14 @@ function getVenderBoletos(req, res){
   })
   .catch((err) => {
     console.log(err)
-  
+
   });
 }
 
-function getAsientosDisp(req, res){
-  var params = req.body;
-  var claveCorrida = '4PTEP0610N838900';
-  var origen = '4PTE';
-  var sesionId = '3730';
+ function getAsientosDisp(req, res){
+  var claveCorrida = req.params.claveCorrida;
+  var origen = req.params.origen;
+  var sesionId = req.params.id;
 
   const headers = {
     'user-agent': 'sampleTest',
@@ -407,18 +398,16 @@ function getAsientosDisp(req, res){
   const xml = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://control/">
    <soapenv:Header/>
    <soapenv:Body>
-   <con:getAsientosDisp>
-   <!--Optional:-->
-   <request>
-   <!--Optional:-->
-   <claveCorrida>${claveCorrida}</claveCorrida>
-   <!--Optional:-->
-   <origen>${origen}</origen>
-   <sesionId>${sesionId}</sesionId>
-   </request>
-   </con:getAsientosDisp>
+   		<con:getAsientosDisp>
+   			<request>
+   				<claveCorrida>${claveCorrida}</claveCorrida>
+   				<origen>${origen}</origen>
+   				<sesionId>${sesionId}</sesionId>
+   			</request>
+   		</con:getAsientosDisp>
    </soapenv:Body>
   </soapenv:Envelope>`;
+
   soapRequest(url, headers, xml)
   .then((response) => {
     console.log(response.response.body);
@@ -430,14 +419,14 @@ function getAsientosDisp(req, res){
   })
   .catch((err) => {
     console.log(err)
-  
+
   });
 }
 
 
 module.exports = {
 	getLogin,
-	getCorridas,  
+	getCorridas,
   getAsientosDisp,
   getOrigenesDestinosEr,
   getBloquearAsientos,
