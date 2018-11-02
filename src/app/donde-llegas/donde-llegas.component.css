@@ -104,9 +104,9 @@
   background: rgba(57, 177, 228, 0.65);
   color: #f2f2f2;
   padding: 0.5em;
-  font-size: 0.5em;
+  font-size: 2.8vw;
   letter-spacing: 2px;
-  border-radius: 5px;
+  border-radius: 7vw;
   box-sizing: border-box;
   transition: all 500ms ease;
   display: block;
@@ -168,8 +168,9 @@
 .sencillo{
   background-image: url("/assets/img/viajesencillo.png");
   background-repeat: no-repeat;
-  width: 6.5vh;
-  height: 3.5vh;
+  width: 11.9vw;
+  height: 4.8vh;
+  margin-left: 10vw;
   background-color: transparent !important;
   outline: none;
   border: none !important;
@@ -178,24 +179,30 @@
 .sencillo:hover{
   background-image: url("/assets/img/viajesencillo-on.png");
   background-repeat: no-repeat;
-  width: 6.5vh;
-  height: 3.5vh;
+  width: 11.9vw;
+  height: 4.8vh;
+  margin-left: 10vw;
   background-color: transparent !important;
   outline: none;
   border: none !important;
   cursor: pointer;
 }
+.sencillo1{
+  width: 11.9vw;
+  margin-left: 10vw;
+}
+
 
 .sencilloDiv{
-  text-align: center;
   color: white;
 }
 
 .redondo{
   background-image: url("/assets/img/viajeredondo-off.png");
   background-repeat: no-repeat;
-  width: 6.5vh;
-  height: 3.9vh;
+  width: 11.9vw;
+  height: 4.8vh;
+  margin-left: 6vw;
   background-color: transparent !important;
   outline: none;
   border: none !important;
@@ -204,26 +211,30 @@
 .redondo:hover{
   background-image: url("/assets/img/viajeredondo-on.png");
   background-repeat: no-repeat;
-  width: 6.5vh;
-  height: 3.9vh;
+  width: 11.9vw;
+  height: 4.8vh;
+  margin-left: 6vw;
   background-color: transparent !important;
   outline: none;
   border: none !important;
   cursor: pointer;
 }
 
+.redondo1{
+  width: 11.9vw;
+  margin-left: 6vw;
+
+}
+
 .redondoDiv{
-  text-align: center;
   color: white;
 }
 
 label{
   color: white;
+  margin-left: 8vw;
 }
 
-.llenado{
-  text-align: center;
-}
 /*Clase para la equis de cerrar el modal*/
 .close{
   float: right;
@@ -254,10 +265,10 @@ label{
 
 select#viaje {
   margin: 0.3vw;
-  width: 33vh;
+  width: 22.5vw;
   color: #17a0db;
   padding: 5px 35px 5px 5px;
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid #ccc;
   height: 34px;
   -webkit-appearance: none;
@@ -285,13 +296,42 @@ p{
 
 input#viaje {
   margin: 0.3vw;
-  width: 33vh;
+  width: 22.5vw;
   color: #17a0db;
   padding: 5px 35px 5px 5px;
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid #ccc;
   height: 34px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+@media only screen and (max-width: 700px) {
+  select#viaje {
+  margin: 0.3vw;
+  width: 60vw;
+  color: #17a0db;
+  padding: 5px 35px 5px 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("/assets/img/down-arrow.png") 96% / 15% no-repeat #eee;
+}
+input#viaje {
+  margin: 0.3vw;
+  width: 60vw;
+  color: #17a0db;
+  padding: 5px 35px 5px 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 }
