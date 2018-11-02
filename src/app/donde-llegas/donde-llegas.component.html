@@ -1,32 +1,32 @@
 <!--
 <div class="loading-container2">
-	<img class="loading-logo" src="https://aeropuertoer.com.mx/airport/img/logo-ER-white.png">
-	<div class="pulse"></div>
+  <img class="loading-logo" src="https://aeropuertoer.com.mx/airport/img/logo-ER-white.png">
+  <div class="pulse"></div>
 </div>
 -->
 <div class="container-fluid">
-	<div class="fondo1">
-		<div class="row justify-content-center">
+  <div class="fondo1">
+    <div class="row justify-content-center">
 
 
-				<div *ngIf="alertRegister" class="col-8 col-md-8 col-xl-8 text-center">
-					<div class="alert alert-danger fade show" role="alert">
-					  <strong>¡Error!</strong> {{alertRegister}}
-					</div>
-				</div>
+        <div *ngIf="alertRegister" class="col-8 col-md-8 col-xl-8 text-center">
+          <div class="alert alert-danger fade show" role="alert">
+            <strong>¡Error!</strong> {{alertRegister}}
+          </div>
+        </div>
 
-			<div class="col-md-6 col-6 col-xl-6 portadaIzquierda">
-					<button (click)="pueblaShow();" class="btn1">Puebla</button>
-			</div>
-			<div class="col-md-6 col-6 col-xl-6 portadaDerecha">
-					<button (click)="mexicoShow();" class="btn1">Aeropuerto CDMX</button>
-			</div>
-			<div class="col-md-12 col-xl-12 col-12 titulo">
-				<h1>¡Tu viaje comienza aquí!</h1>
-				<p>¿A dónde llegas?</p>
-			</div>
-		</div>
-	</div>
+      <div class="col-md-6 col-6 col-xl-6 portadaIzquierda">
+          <button (click)="pueblaShow();" class="btn1">Puebla</button>
+      </div>
+      <div class="col-md-6 col-6 col-xl-6 portadaDerecha">
+          <button (click)="mexicoShow();" class="btn1">Aeropuerto CDMX</button>
+      </div>
+      <div class="col-md-12 col-xl-12 col-12 titulo">
+        <h1>¡Tu viaje comienza aquí!</h1>
+        <p>¿A dónde llegas?</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Inicio del modal de puebla-->
@@ -76,6 +76,7 @@
         <input id="viaje" name="todayDatePuebla" type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="todayDatePuebla" [minDate]="todayDatePuebla">
       </div>
 
+
 			<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 ">
   			<label>Selecciona ida y regreso</label>
   		</div>
@@ -90,10 +91,10 @@
 				<input type="number" min="1" max="5" id="viaje" value="1" name="">
   		</div>
 
-			<div class="col-12 col-md-12 col-xl-12 divViaje">
-  			<button data-dismiss="modal" (click)="checkValuesPuebla()" class="btnViaje">Inicia tu viaje</button>
-  		</div>
-  	</div>
+      <div class="col-12 col-md-12 col-xl-12 divViaje">
+        <button data-dismiss="modal" (click)="checkValuesPuebla()" class="btnViaje">Inicia tu viaje</button>
+      </div>
+    </div>
   </div>
 </div>
 

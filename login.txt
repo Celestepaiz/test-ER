@@ -1,0 +1,25 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://control/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:getLogin>
+         <!--Optional:-->
+         <parameter>
+           <!--Optional:-->
+            <canalVenta>TMS</canalVenta>
+            <!--Optional:-->
+            <direccionIP>189.203.101.114</direccionIP>
+            <!--Optional:-->
+            <direccionMAC>A0:21:B7:A9:05:C0</direccionMAC>
+            <!--Optional:-->
+            <nombreCaja>CAJAWEB-ER</nombreCaja>
+            <!--Optional:-->
+            <nombreEquipo>CAJAWEB-ER</nombreEquipo>
+            <!--Optional:-->
+            <sucursalClave>WEB</sucursalClave>
+            <!--Optional:-->
+            <usuarioContrasena>123456</usuarioContrasena>
+            <!--Optional:-->
+            <usuarioNumero>1010</usuarioNumero>
+         </parameter>
+      </con:getLogin>
+   </soapenv:Body>
