@@ -14,6 +14,7 @@ import { DondeLlegasComponent } from './donde-llegas/donde-llegas.component';
 import { ListComponent } from './list/list.component';
 import { PagoComponent } from './pago/pago.component';
 import { AsientosComponent } from './asientos/asientos.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import { NavbarComponent } from './components/navbar.component';
 import { FooterComponent } from './components/footer.component';
@@ -29,7 +30,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     AsientosComponent,
     PagoComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
