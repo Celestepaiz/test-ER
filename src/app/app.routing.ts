@@ -18,8 +18,8 @@ const appRoutes: Routes = [
 	{path: 'list', component: ListComponent},
 	{path: 'asientos', component: AsientosComponent},
 	{path: 'pago', component: PagoComponent},
-	{path: 'landing-page', component: LandingPageComponent},
 	{path: 'boleto', component: BoletoComponent},
+	{path: 'landing-page', component: LandingPageComponent},
 	{path: '**', pathMatch: 'full', redirectTo: 'landing-page' }
 ];
 

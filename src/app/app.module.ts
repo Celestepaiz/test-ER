@@ -20,6 +20,7 @@ import { NavbarComponent } from './components/navbar.component';
 import { FooterComponent } from './components/footer.component';
 
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 import { BoletoComponent } from './boleto/boleto.component';
 
 @NgModule({

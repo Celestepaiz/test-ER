@@ -12,7 +12,6 @@ describe('BoletoComponent', () => {
     })
     .compileComponents();
   }));
-
   beforeEach(() => {
     fixture = TestBed.createComponent(BoletoComponent);
     component = fixture.componentInstance;
