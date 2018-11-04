@@ -1,0 +1,75 @@
+<div class="container box">
+
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <button [disabled]="!loading" [routerLink]="['/boletos']" type="button" class="btn btn-primary btn-lg">Regresar</button>
+      <br><br><br>
+    </div>
+
+    <div class="col-md-6 text-center">
+      <button [disabled]="!loading" [routerLink]="['/donde-llegas']" type="button" class="btn btn-danger btn-lg">Salir</button>
+      <br><br><br>
+    </div>
+  </div>
+  <!--
+  <div *ngIf="!loading" class="card text-center">
+    <div class="card-header">
+      Estrella Roja
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <br><br><br><br>
+          <h1 class="display-4">Preparando tu viaje</h1>
+          <div class="lds-hourglass"></div>
+          <p class="h5">Cargando boletos</p>
+          <br><br><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+      Aeropuerto
+    </div>
+  </div>-->
+
+  <div *ngIf="!loading" class="card text-center">
+    <div class="card-header">
+      Estrella Roja
+    </div>
+    <div class="event">
+      <div class="event-side">
+        <div class="cut-out"></div>
+      </div>
+      <div class="event-body">
+        <div class="boleto black">
+          Boleto Sencillo
+        </div>
+        <div class="fecha">
+          31 NOV 2018
+        </div>
+        <div class="cliente">
+          Celeste Paiz
+        </div>
+        <div class="origen-destino txt-blue">
+          PUE - AEROPUERTO
+        </div>
+        <div class="d-flex justify-content-around">
+          <div class="tarifa-asiento d-flex justify-content-around">
+            <h6 class="dark-blue">Tarifa:</h6>
+            <h6>$300</h6>
+          </div>
+          <div class="tarifa-asiento d-flex justify-content-around">
+            <h6 class="dark-blue">Asiento:</h6>
+            <h6>20</h6>
+          </div>
+        </div>
+        <div class="back"></div>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="card-footer text-muted">
+      Aeropuerto
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
