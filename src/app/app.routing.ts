@@ -8,6 +8,7 @@ import { ListComponent } from './list/list.component';
 import { PagoComponent } from './pago/pago.component';
 import { AsientosComponent } from './asientos/asientos.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { BoletoComponent} from './boleto/boleto.component'
 
 
 //Estas son las rutas de nuestro proyecto que agregaremos poco a poco
@@ -17,9 +18,9 @@ const appRoutes: Routes = [
 	{path: 'list', component: ListComponent},
 	{path: 'asientos', component: AsientosComponent},
 	{path: 'pago', component: PagoComponent},
+	{path: 'boleto', component: BoletoComponent},
 	{path: 'landing-page', component: LandingPageComponent},
 	{path: '**', pathMatch: 'full', redirectTo: 'landing-page' }
-
 ];
 
 export const appRoutingProviders: any[] = [];
