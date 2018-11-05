@@ -21,6 +21,9 @@ export class DondeLlegasComponent implements OnInit {
   public selectedValueMexicoDondeSales;
   public selectedValueMexicoDondeLlegas;
 
+  public selectedAsientosNumberPuebla;
+  public selectedAsientosNumberMexico;
+
   public valueRedondo: boolean;
   public valueIda: boolean = true;
   public serverLives: boolean;
@@ -145,6 +148,8 @@ export class DondeLlegasComponent implements OnInit {
     }
 
     checkValuesPuebla(){
+      
+
       if(this.serverLives == true){
         if(this.selectedValuePueblaDondeSales == null || this.selectedValuePueblaDondeLlegas == null){
           this.alertRegister = 'Selecciona lugar de Salida y Llegada';
@@ -154,28 +159,38 @@ export class DondeLlegasComponent implements OnInit {
             if(this.todayDatePueblaRegreso == null){
               this.alertRegister = 'Selecciona una fecha para tu viaje de regreso';
             }else{
-              this.alertRegister = null;  // Aqui todo esta bien en el viaje redondo
-              this._router.navigate(['list'], {
-                queryParams: {
-                  salida: this.selectedValuePueblaDondeSales,
-                  llegada: this.selectedValuePueblaDondeLlegas,
-                  fech: this.todayDatePuebla,
-                  fecReg: this.todayDatePueblaRegreso
-                }
-              });
+              if(this.selectedAsientosNumberPuebla == null){
+                this.alertRegister = 'Selecciona el número de asientos';
+              }else{
+                this.alertRegister = null;  // Aqui todo esta bien en el viaje redondo
+                this._router.navigate(['list'], {
+                  queryParams: {
+                    salida: this.selectedValuePueblaDondeSales,
+                    llegada: this.selectedValuePueblaDondeLlegas,
+                    fech: this.todayDatePuebla,
+                    fecReg: this.todayDatePueblaRegreso,
+                    asientos: this.selectedAsientosNumberPuebla
+                  }
+                });
+              }              
             }
           }else{
             if(this.todayDatePuebla == null){
               this.alertRegister = 'Selecciona una fecha para tu viaje de ida';
             }else{
-              this.alertRegister = null;  // Aqui todo esta bien en el viaje no redondo
-              this._router.navigate(['list'], {
-                queryParams: {
-                  salida: this.selectedValuePueblaDondeSales,
-                  llegada: this.selectedValuePueblaDondeLlegas,
-                  fech: this.todayDatePuebla
-                }
-              });
+              if(this.selectedAsientosNumberPuebla == null){
+                this.alertRegister = 'Selecciona el número de asientos';
+              }else{
+                this.alertRegister = null;  // Aqui todo esta bien en el viaje no redondo
+                this._router.navigate(['list'], {
+                  queryParams: {
+                    salida: this.selectedValuePueblaDondeSales,
+                    llegada: this.selectedValuePueblaDondeLlegas,
+                    fech: this.todayDatePuebla,
+                    asientos: this.selectedAsientosNumberPuebla
+                  }
+                });
+              }
             }
           }
         }
@@ -194,28 +209,38 @@ export class DondeLlegasComponent implements OnInit {
             if(this.todayDateMexicoRegreso == null){
               this.alertRegister = 'Selecciona una fecha para tu viaje de regreso';
             }else{
-              this.alertRegister = null; // Aqui todo esta bien en el viaje redondo
-              this._router.navigate(['list'], {
-                queryParams: {
-                  salida: this.selectedValueMexicoDondeSales,
-                  llegada: this.selectedValueMexicoDondeLlegas,
-                  fech: this.todayDateMexico,
-                  fecReg: this.todayDateMexicoRegreso
-                }
-              });
+              if(this.selectedAsientosNumberMexico == null){
+                this.alertRegister = 'Selecciona el número de asientos';
+              }else{
+                this.alertRegister = null; // Aqui todo esta bien en el viaje redondo
+                this._router.navigate(['list'], {
+                  queryParams: {
+                    salida: this.selectedValueMexicoDondeSales,
+                    llegada: this.selectedValueMexicoDondeLlegas,
+                    fech: this.todayDateMexico,
+                    fecReg: this.todayDateMexicoRegreso,
+                    asientos: this.selectedAsientosNumberMexico
+                  }
+                });
+              }
             }
           }else{
             if(this.todayDateMexico == null){
               this.alertRegister = 'Selecciona una fecha para tu viaje de ida';
             }else{
-              this.alertRegister = null;  // Aqui todo esta bien en el viaje no redondo
-              this._router.navigate(['list'], {
-                queryParams: {
-                  salida: this.selectedValueMexicoDondeSales,
-                  llegada: this.selectedValueMexicoDondeLlegas,
-                  fech: this.todayDateMexico
-                }
-              });
+              if(this.selectedAsientosNumberMexico == null){
+                this.alertRegister = 'Selecciona el número de asientos';
+              }else{
+                this.alertRegister = null;  // Aqui todo esta bien en el viaje no redondo
+                this._router.navigate(['list'], {
+                  queryParams: {
+                    salida: this.selectedValueMexicoDondeSales,
+                    llegada: this.selectedValueMexicoDondeLlegas,
+                    fech: this.todayDateMexico,
+                    asientos: this.selectedAsientosNumberMexico
+                  }
+                });
+              }
             }
           }
         }
