@@ -1,4 +1,4 @@
-<div id="container">
+<div id="container" class="fondo1">
   <header></header>
 
   <div class="row">
@@ -16,28 +16,48 @@
   </div>
 
 
-  <section>
+  <section class="formulario">
     <br>
-    <h3>Código Promocional</h3><br>
-    <div class="container box" style="width:700px; margin:0 auto;">
-      <div class="row">
-        <div class="col">
-          <input type = "text" name = "CodigoProm" value="" style="width:250px; height: 40px; margin:0 auto;">
+    <h3>Llena tus datos</h3><br>
+    <form>
+    <div class="container box">
+      <table>
+        <tr>
+          <th>
+              Nombre(s):
+          </th>
+          <th>
+              Apellidos:
+          </th>
+          <th>
+              Correo electrónico:
+          </th>
+        </tr>
 
-            </div>
-        <div class="col">
-          <button type="button" class="btn btn-outline-info" style="width:200px; float: right;" >Agregar</button>
-        </div>
-      </div>
+        <tr>
+          <th>
+              <input type = "text" [formControl]="name" style="width:250px; height: 40px; margin:0 auto;">
+          </th>
+          <th>
+              <input type = "text" [formControl]="lastName" style="width:250px; height: 40px; margin:0 auto;">
+          </th>
+          <th>
+              <input type = "text" [formControl]="email" style="width:250px; height: 40px; margin:0 auto;" placeholder="ejemplo@ejemplo.com">
+          </th>
+        </tr>
+      </table>
     </div>
+  </form>
     <br>
 
     <div class="container box" style="width:700px; margin:0 auto; border:1px solid #cecece;">
 
       <div class="row">
         <div class="col"><br>
-          <h5>Viernes 13 de Octubre del 2018 </h5>
-          <h6><b>Nombre:</b> Jesus Castillo </h6>
+          <h5>{{ today | date:'short' }}</h5>
+          
+          <h6><b>Nombre:</b> {{ name.value }} {{ lastName.value}}</h6>
+          <h6><b>Correo:</b>{{ email.value }}</h6>
           <h6><b>Origen:</b> Puebla</h6>
           <h6><b>Destino:</b> Terminal 1 CDMX</h6>
           <h6><b>Asiento:</b> 20</h6>
@@ -58,23 +78,17 @@
     <div class="container box" style="width:700px; margin:0 auto; border:1px solid #cecece;">
 
 
-      <div class="row">
-        <div class="col"><br>
-          <h6>Recomendaciones</h6>
-          <p style="font-size:70%;" align="justify">- * Los campos son obligatorios.<br>
-        - Si compras boleto con descuento INAPAM, es necesario presentar una credencial vigente.<br>
-        - Si no estás registrado y deseas hacer un cambio o cancelación, sólo podrás hacerlo en ventanilla. Para hacerlo desde el sitio web hay que registrarse.<br>
-        - Puedes descargar nuestra App de Entretenimiento a bordo aquí y disfrútala durante tu viaje.</p>
-
-
-        </div>
-        <div class="col "><br>
-          <h6>Pagar con...</h6><br><br><br><br><br>
-          <button type="button" class="btn btn-outline-info" style="width:200px; float: right;">Pagar</button> <br><br>
-
-        </div>
-      </div>
-
+      
+        <h5 align="center">Pago</h5>
+        <br>
+        <h6 align="center">Paga y recibe tu boleto en tu correo electrónico</h6>\
+        <h2 *ngIf="paypalLoad">Cargando...</h2> 
+          <div id="paypal-button-container" align="center"></div>
+      
+     
+      
+      
+      
 
     </div>
   </section>
