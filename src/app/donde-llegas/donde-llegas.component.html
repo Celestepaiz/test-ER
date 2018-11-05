@@ -16,7 +16,7 @@
         </div>
 
       <div class="col-md-6 col-6 col-xl-6 portadaIzquierda">
-          <button [disabled]="lockButtons" (click)="pueblaShow();" class="btn1">Puebla</button>
+          <button (click)="pueblaShow();" class="btn1">Puebla</button>
       </div>
       <div class="col-md-6 col-6 col-xl-6 portadaDerecha">
           <button [disabled]="lockButtons" (click)="mexicoShow();" class="btn1">Aeropuerto CDMX</button>
@@ -88,7 +88,7 @@
   			<label>¿Cuántos viajan?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 ">
-				<input type="number" min="1" max="5" id="viaje" value="1" name="">
+				<input [(ngModel)]="selectedAsientosNumberPuebla" type="number" min="1" max="5" id="viaje" value="1" name="">
   		</div>
 
       <div class="col-12 col-md-12 col-xl-12 divViaje">
@@ -153,7 +153,7 @@
   			<label>¿Cuántos viajan?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 ">
-  			<input type="number" min="1" max="5" id="viaje" value="1" name="">
+  			<input [(ngModel)]="selectedAsientosNumberMexico" type="number" min="1" max="5" id="viaje" value="1" name="">
   		</div>
   		<div class="col-12 col-md-12 col-xl-12 divViaje">
   			<button data-dismiss="modal" (click)="checkValuesMexico()"  class="btnViaje">Inicia tu viaje</button>

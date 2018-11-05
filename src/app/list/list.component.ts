@@ -22,6 +22,7 @@ export class ListComponent implements OnInit {
   public llegada;
   public fechaSalida;
   public fechaRegreso;
+  public asientos;
 
   public loading: boolean;
   public noCorridas: boolean;
@@ -44,6 +45,7 @@ export class ListComponent implements OnInit {
         this.llegada = params['llegada'] || null;
         this.fechaSalida = params['fech'] || null;
         this.fechaRegreso = params['fecReg'] || null;
+        this.asientos = params['asientos'] || null;
       });
 
       //Validaciones de que existan parametros
@@ -51,12 +53,20 @@ export class ListComponent implements OnInit {
         this._router.navigate(['donde-sales']);
       }else{
         if(this.fechaRegreso != null){ //Aqui hay fecha de Regreso
-          console.log('Todo esta bien en el viaje redondo');
-          this.consultaCorridas(true);
+          if(this.asientos != null){
+            console.log('Todo esta bien en el viaje redondo');
+            this.consultaCorridas(true);
+          }else{
+            this._router.navigate(['donde-sales']);
+          }          
         }else{ //Aqui no lo hay
           if(this.fechaSalida != null){
-            console.log('Todo esta bien en el viaje sencillo');
-            this.consultaCorridas(false);
+            if(this.asientos != null){
+              console.log('Todo esta bien en el viaje sencillo');
+              this.consultaCorridas(false); 
+            }else{
+              this._router.navigate(['donde-sales']);
+            }            
           }else{
             this._router.navigate(['donde-sales']);
           }
@@ -136,7 +146,8 @@ export class ListComponent implements OnInit {
         salida: this.salida,
         llegada: this.llegada,
         fech: myFecha,
-        clave: claveViaje   
+        clave: claveViaje,
+        asientos: this.asientos
       }
     });
   }

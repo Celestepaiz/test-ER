@@ -19,8 +19,10 @@ export class AsientosComponent implements OnInit {
   public fechaSalida;
   public fechaRegreso;
   public claveViaje;
+  public asientos;
 
   public loading: boolean;
+  public banderaAsiento: boolean;
 
   constructor(
     private _route: ActivatedRoute,
@@ -30,13 +32,15 @@ export class AsientosComponent implements OnInit {
 
   ngOnInit() {
     this.loading = false;
+    this.banderaAsiento = false;
     this.identity = this._totemService.getIdentity();
     this._route.queryParams.subscribe(params => {      
       this.salida = params['salida'] || null;
       this.llegada = params['llegada'] || null;
       this.fechaSalida = params['fech'] || null;
       this.claveViaje = params['clave'] || null;
-    });
+      this.asientos = params['asientos'] || null;
+    });    
   }
 
   vuelveConParametros(){
@@ -44,9 +48,19 @@ export class AsientosComponent implements OnInit {
       queryParams: {
         salida: this.salida,
         llegada: this.llegada,
-        fech: this.fechaSalida        
+        fech: this.fechaSalida,
+        asientos: this.asientos     
       }
     });
   }
+
+  bloqueaAsiento(){
+    if(this.banderaAsiento)    
+      this.banderaAsiento = false;
+    else
+      this.banderaAsiento = true;
+    
+    console.log(this.banderaAsiento);
+  } 
 
 }
