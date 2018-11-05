@@ -4,6 +4,7 @@ import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -39,6 +40,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     HttpModule,
     routing,
     FormsModule,
+    ReactiveFormsModule,
     BsDatepickerModule.forRoot()  
   ],
   providers: [appRoutingProviders],
