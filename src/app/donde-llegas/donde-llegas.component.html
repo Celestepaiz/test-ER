@@ -16,10 +16,10 @@
         </div>
 
       <div class="col-md-6 col-6 col-xl-6 portadaIzquierda">
-          <button (click)="pueblaShow();" class="btn1">Puebla</button>
+          <button [disabled]="lockButtons" (click)="pueblaShow();" class="btn1">Puebla</button>
       </div>
       <div class="col-md-6 col-6 col-xl-6 portadaDerecha">
-          <button (click)="mexicoShow();" class="btn1">Aeropuerto CDMX</button>
+          <button [disabled]="lockButtons" (click)="mexicoShow();" class="btn1">Aeropuerto CDMX</button>
       </div>
       <div class="col-md-12 col-xl-12 col-12 titulo">
         <h1>¡Tu viaje comienza aquí!</h1>
