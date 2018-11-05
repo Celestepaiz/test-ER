@@ -99,27 +99,33 @@ export class DondeLlegasComponent implements OnInit {
   }
 
   	ngOnInit() {
-      this.iniciarSesion();
+      this.getServerStatus();
 
-  	}
+    }
 
+    getServerStatus(){
+      this._totemService.getServerStatus().subscribe(
+				response => {
+					this.iniciarSesion();
+				},
+				error => {
+          this.alertRegister = '¡Oops! Ocurrió un error en el servidor';
+				}
+			);
+    }
 
     iniciarSesion(){
+      this.alertRegister = null;
       this._totemService.getIDFromLogin().subscribe(
 				response => {
 					  //console.log(response.sesionID);
             let identity = response;
             this.identity = identity;
-
+            this.alertRegister = null;
             localStorage.setItem('myID', JSON.stringify(identity));
 				},
 				error => {
-          var errorMessage = <any>error;
-
-	        if(errorMessage != null){
-	          var body = JSON.parse(error._body);
-	          this.alertRegister = body.message;
-	        }
+          this.alertRegister = '¡Oops! Ocurrió un error en el servidor';
 				}
 			);
     }
