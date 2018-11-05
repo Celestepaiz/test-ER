@@ -163,12 +163,12 @@ function getOrigenesDestinosEr(req, res){
 
 function getBloquearAsientos(req, res){
   var params = req.body;
-  var claveCorrida = '4PTEP0610N838900';
-  var modalidad = 'O';
-  var noAsientos = ',13';
-  var origen = '4PTE';
-  var sesionId = '3730';
-  var tipoPasajero = ',A';
+  var claveCorrida = req.params.claveCorrida;
+  var modalidad = req.params.modalidad;
+  var noAsientos = req.params.noAsientos;
+  var origen = req.params.origen;
+  var sesionId = req.params.sesionId;
+  var tipoPasajero = req.params.tipoPasajero;
 
   const headers = {
     'user-agent': 'sampleTest',
