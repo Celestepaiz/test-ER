@@ -95,6 +95,7 @@ width: 100%;
     display: block;
     padding: 14px 29px 10px 20px;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .asiento-ocupado{
@@ -105,6 +106,16 @@ width: 100%;
     display: block;
     padding: 14px 29px 10px 20px;
     transition: all 0.5s;
+}
+
+.asiento-no-disponible{
+  background: url('/assets/img/camion-asientoR-H90.png') no-repeat;
+  background-size: cover;
+  width: 49px;
+  height: 66px;
+  display: block;
+  padding: 14px 29px 10px 20px;
+  transition: all 0.5s;
 }
 
 .first-seats{

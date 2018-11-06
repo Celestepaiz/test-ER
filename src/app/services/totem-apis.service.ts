@@ -27,6 +27,16 @@ export class TotemApisService {
       return this._http.get(this.url+'get-login-id', options).pipe(map(res => res.json()));
     }
 
+    getServerStatus(){
+      let headers = new Headers({
+        'Content-Type':'application/json'
+      });
+
+      let options = new RequestOptions({ headers: headers });
+
+      return this._http.get(this.url+'get-server-status', options).pipe(map(res => res.json()));
+    }
+
     getCorridas(parametros){
 
 		  let headers = new Headers({

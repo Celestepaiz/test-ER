@@ -2,9 +2,27 @@
 const soapRequest = require('easy-soap-request');
 const convert = require('xml-js');
 const fs = require('fs');
+var request = require('request');
 //var url = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService?wsdl';
 var url = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService';
+var urlToCheck = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService?wsdl';
 var loginStatus = false;
+
+function getStatus(req, res){  
+  
+  request.get(urlToCheck, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+        //console.log(response.body);
+        res.type('application/javascript');
+        res.jsonp({
+            'statusCode': 200,            
+            'Info'     : 'Server Available'
+        });
+    } else {
+        res.status(500).send({message: 'Ocurrio un error en el servidor'});
+    }
+  });
+}
 
 function getLogin(req, res){
 
@@ -145,12 +163,12 @@ function getOrigenesDestinosEr(req, res){
 
 function getBloquearAsientos(req, res){
   var params = req.body;
-  var claveCorrida = '4PTEP0610N838900';
-  var modalidad = 'O';
-  var noAsientos = ',13';
-  var origen = '4PTE';
-  var sesionId = '3730';
-  var tipoPasajero = ',A';
+  var claveCorrida = req.params.claveCorrida;
+  var modalidad = req.params.modalidad;
+  var noAsientos = req.params.noAsientos;
+  var origen = req.params.origen;
+  var sesionId = req.params.sesionId;
+  var tipoPasajero = req.params.tipoPasajero;
 
   const headers = {
     'user-agent': 'sampleTest',
@@ -430,5 +448,6 @@ module.exports = {
   getAsientosDisp,
   getOrigenesDestinosEr,
   getBloquearAsientos,
-  getVenderBoletos
+  getVenderBoletos,
+  getStatus
 };

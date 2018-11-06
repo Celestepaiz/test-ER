@@ -4,6 +4,7 @@ import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -22,6 +23,8 @@ import { FooterComponent } from './components/footer.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TouristerComponent } from './tourister/tourister.component';
 
+import { BoletoComponent } from './boleto/boleto.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,8 @@ import { TouristerComponent } from './tourister/tourister.component';
     NavbarComponent,
     FooterComponent,
     LandingPageComponent,
-    TouristerComponent
+    TouristerComponent,
+    BoletoComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +45,7 @@ import { TouristerComponent } from './tourister/tourister.component';
     HttpModule,
     routing,
     FormsModule,
+    ReactiveFormsModule,
     BsDatepickerModule.forRoot()  
   ],
   providers: [appRoutingProviders],
