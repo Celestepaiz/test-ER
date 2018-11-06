@@ -21,6 +21,7 @@ import { NavbarComponent } from './components/navbar.component';
 import { FooterComponent } from './components/footer.component';
 
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TouristerComponent } from './tourister/tourister.component';
 
 import { BoletoComponent } from './boleto/boleto.component';
 
@@ -35,6 +36,7 @@ import { BoletoComponent } from './boleto/boleto.component';
     NavbarComponent,
     FooterComponent,
     LandingPageComponent,
+    TouristerComponent,
     BoletoComponent
   ],
   imports: [
