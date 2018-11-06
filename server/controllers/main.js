@@ -4,8 +4,8 @@ const convert = require('xml-js');
 const fs = require('fs');
 var request = require('request');
 //var url = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService?wsdl';
-var url = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService';
-var urlToCheck = 'http://187.210.68.147:8082/ER_WS_CONTROL/ERWSINFRAService?wsdl';
+var url = 'http://187.210.68.147:8080/ER_WS_CONTROL/ERWSINFRAService';
+var urlToCheck = 'http://187.210.68.147:8080/ER_WS_CONTROL/ERWSINFRAService?wsdl';
 var loginStatus = false;
 
 function getStatus(req, res){  
