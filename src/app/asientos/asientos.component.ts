@@ -21,6 +21,8 @@ export class AsientosComponent implements OnInit {
   public claveViaje;
   public asientos;
 
+  public contador;
+
   public loading: boolean;
   public banderaAsiento: boolean;
 
@@ -32,6 +34,7 @@ export class AsientosComponent implements OnInit {
 
   ngOnInit() {
     this.loading = false;
+    this.contador = 0;
     this.banderaAsiento = false;
     this.identity = this._totemService.getIdentity();
     this._route.queryParams.subscribe(params => {      
