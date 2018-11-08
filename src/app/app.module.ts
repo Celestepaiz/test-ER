@@ -24,6 +24,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TouristerComponent } from './tourister/tourister.component';
 
 import { BoletoComponent } from './boleto/boleto.component';
+import { RolloComponent } from './rollo/rollo.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BoletoComponent } from './boleto/boleto.component';
     FooterComponent,
     LandingPageComponent,
     TouristerComponent,
-    BoletoComponent
+    BoletoComponent,
+    RolloComponent
   ],
   imports: [
     BrowserModule,
