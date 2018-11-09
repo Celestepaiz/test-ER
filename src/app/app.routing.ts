@@ -9,7 +9,7 @@ import { PagoComponent } from './pago/pago.component';
 import { AsientosComponent } from './asientos/asientos.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import {TouristerComponent} from './tourister/tourister.component';
-import { BoletoComponent} from './boleto/boleto.component'
+import { BoletoComponent} from './boleto/boleto.component';
 
 
 //Estas son las rutas de nuestro proyecto que agregaremos poco a poco
