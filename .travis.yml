@@ -1,14 +1,11 @@
-pool:
-  vmImage: 'Ubuntu 16.04'
+languague: node_js
+node_js:
+-"6"
+-"7"
+-"8"
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '8.x'
-  displayName: 'Install Node.js'
-
-- script: |
+- install: 
     npm install -g @angular/cli
     npm install
     ng build --prod
-  displayName: 'npm install and build'
+  script: 'npm install and build'
