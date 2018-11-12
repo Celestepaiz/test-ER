@@ -19,8 +19,8 @@ before_script:
 
 script: 
   - npm run start:server
-  - ng serve
-  - ng build --base-href https://github.com/Celestepaiz/test-ER/
+  - ng serve 
+  - yarn build --base-href "https://github.com/Celestepaiz/test-ER/"
 
 deploy:
   provider: pages
