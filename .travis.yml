@@ -20,7 +20,7 @@ before_script:
 script: 
   - ng test --watch false -cc
   - npm run 
-  - ng build -bh "https://ahsanayaz.github.io/ng-traffic-ci/"
+  - ng build -bh "https://github.com/Celestepaiz/test-ER/"
 
 deploy:
   provider: pages
