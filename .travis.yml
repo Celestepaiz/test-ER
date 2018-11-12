@@ -23,8 +23,9 @@ before_script:
  - sudo dpkg -i google-chrome*.deb
 
 script: 
-  - yarn lint
-  - yarn build --base-href https://Celestepaiz.github.io/test-ER/
+   - npm run start:server
+   - ng serve
+   - ng build --base-href https://Celestepaiz.github.io/test-ER/
 
 deploy:
   provider: pages
