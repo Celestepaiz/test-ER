@@ -8,10 +8,6 @@ branches:
  only:
  - master
  
-cache:
-  directories:
-   - node_modules
-
 before_script:
  - npm install -g yarn
  - export CHROME_BIN=/usr/bin/google-chrome
@@ -22,10 +18,13 @@ before_script:
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb
 
-script: 
-   - npm run start:server
-   - ng serve
+install: 
+   - npm install -g @angular/cli
+   - npm install
+   - ng build --prod
    - ng build --base-href https://Celestepaiz.github.io/test-ER/
+   
+script: 'npm install and build'
 
 deploy:
   provider: pages
