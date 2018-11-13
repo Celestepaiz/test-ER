@@ -24,7 +24,6 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TouristerComponent } from './tourister/tourister.component';
 
 import { BoletoComponent } from './boleto/boleto.component';
-<<<<<<< HEAD
 import { RolloComponent } from './rollo/rollo.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -34,10 +33,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
-=======
 import { NavbarPrincipalComponent } from './navbar-principal/navbar-principal.component';
 import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister.component';
->>>>>>> 69a367bdff08c9d015bee8014815048ae1e456f0
 
 @NgModule({
   declarations: [
@@ -52,12 +49,9 @@ import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister
     LandingPageComponent,
     TouristerComponent,
     BoletoComponent,
-<<<<<<< HEAD
-    RolloComponent
-=======
+    RolloComponent,
     NavbarPrincipalComponent,
     NavabarTouristerComponent
->>>>>>> 69a367bdff08c9d015bee8014815048ae1e456f0
   ],
   imports: [
     BrowserModule,

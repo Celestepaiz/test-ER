@@ -10,10 +10,7 @@ import { AsientosComponent } from './asientos/asientos.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import {TouristerComponent} from './tourister/tourister.component';
 import { BoletoComponent} from './boleto/boleto.component';
-<<<<<<< HEAD
 import {RolloComponent} from './rollo/rollo.component';
-=======
->>>>>>> 69a367bdff08c9d015bee8014815048ae1e456f0
 
 
 //Estas son las rutas de nuestro proyecto que agregaremos poco a poco
