@@ -10,17 +10,17 @@
     <div class="row justify-content-center">
 
 
-        <div *ngIf="alertRegister" class="col-8 col-md-8 col-xl-8 text-center">
-          <div class="alert alert-danger fade show" role="alert">
-            <strong>¡Error!</strong> {{alertRegister}}
-          </div>
+      <div *ngIf="alertRegister" class="col-8 col-md-8 col-xl-8 text-center">
+        <div class="alert alert-danger fade show" role="alert">
+          <strong>¡Error!</strong> {{alertRegister}}
         </div>
+      </div>
 
       <div class="col-md-6 col-6 col-xl-6 portadaIzquierda">
-          <button [disabled]="lockButtons" (click)="pueblaShow();" class="btn1">Puebla</button>
+        <button (click)="pueblaShow();" class="btn1">Puebla</button>
       </div>
       <div class="col-md-6 col-6 col-xl-6 portadaDerecha">
-          <button [disabled]="lockButtons" (click)="mexicoShow();" class="btn1">Aeropuerto CDMX</button>
+        <button (click)="mexicoShow();" class="btn1">Aeropuerto CDMX</button>
       </div>
       <div class="col-md-12 col-xl-12 col-12 titulo">
         <h1>¡Tu viaje comienza aquí!</h1>
@@ -33,64 +33,95 @@
 <!-- Inicio del modal de puebla-->
 <div #muestraPuebla id="miModal" class="modal">
   <div class="modal-contenido">
-  	<div class="row">
-  		<div class="col-10 col-md-10 col-xl-10"></div>
-  		<div class="col-2 col-md-2 col-xl-2">
-  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-  				<span aria-hidden="true">&times;</span>
-        	</button>
-  		</div>
-  		<div class="col-6 col-md-6 col-xl-6 sencilloDiv">
-  			<button (click)='setTipoViajeIda(true);setTipoViajeRedondo(false);' class="sencillo"></button>
-  			<p class="sencillo1">Sencillo</p>
-  		</div>
-  		<div class="col-6 col-md-6 col-xl-6 redondoDiv">
-  			<button (click)='setTipoViajeRedondo(true);setTipoViajeIda(false);' class="redondo"></button>
-  			<p class="redondo1">Redondo</p>
-  		</div>
-  	</div>
-  	<div class="row">
-  		<div class="col-12 col-md-6 col-xl-6 ">
-  			<label>¿De dónde sales?</label>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6 ">
-  			<select [(ngModel)]="selectedValuePueblaDondeSales" id="viaje">
-  				<option *ngFor="let option of optionsPueblaDondeSales" selected="option.name == 'Aeropuerto T1 CDMX'" [value]="option.value">{{option.name}}</option>
-  				<!--<option value="CAPU">Central CAPU PUE</option>value="4PTE"
+    <div class="row">
+      <div class="col-10 col-md-10 col-xl-10"></div>
+      <div class="col-2 col-md-2 col-xl-2">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="col-6 col-md-6 col-xl-6 sencilloDiv">
+        <button (click)='setTipoViajeIda(true);setTipoViajeRedondo(false);' class="sencillo"></button>
+        <p class="sencillo1">Sencillo</p>
+      </div>
+      <div class="col-6 col-md-6 col-xl-6 redondoDiv">
+        <button (click)='setTipoViajeRedondo(true);setTipoViajeIda(false);' class="redondo"></button>
+        <p class="redondo1">Redondo</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-6 ">
+        <label>¿De dónde sales?</label>
+      </div>
+      <div class="col-12 col-md-6 col-xl-6 ">
+        <select [(ngModel)]="selectedValuePueblaDondeSales" id="viaje">
+          <option *ngFor="let option of optionsPueblaDondeSales" selected="option.name == 'Aeropuerto T1 CDMX'" [value]="option.value">{{option.name}}</option>
+          <!--<option value="CAPU">Central CAPU PUE</option>value="4PTE"
   				<option value="PSNDIEGO">Plaza San Diego Cholula PUE</option>-->
-  			</select>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6 ">
-  			<label>¿A dónde llegas?</label>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6 ">
-  			<select [(ngModel)]="selectedValuePueblaDondeLlegas" id="viaje">
-  				<option *ngFor="let option of optionsPueblaDondeLlegas" [value]="option.value">{{option.name}}</option>
-  				<!--<option value="AEROT2">Aeropuerto T2 CDMX</option>-->
-  			</select>
-  		</div>
+        </select>
+      </div>
+      <div class="col-12 col-md-6 col-xl-6 ">
+        <label>¿A dónde llegas?</label>
+      </div>
+      <div class="col-12 col-md-6 col-xl-6 ">
+        <select [(ngModel)]="selectedValuePueblaDondeLlegas" id="viaje">
+          <option *ngFor="let option of optionsPueblaDondeLlegas" [value]="option.value">{{option.name}}</option>
+          <!--<option value="AEROT2">Aeropuerto T2 CDMX</option>-->
+        </select>
+      </div>
 
       <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 ">
         <label>¿Qué día es tu viaje?</label>
       </div>
-      <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 " >
+      <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 ">
         <input id="viaje" name="todayDatePuebla" type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="todayDatePuebla" [minDate]="todayDatePuebla">
       </div>
 
 
-			<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 ">
-  			<label>Selecciona ida y regreso</label>
-  		</div>
-  		<div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 ">
-  			<input id="viaje" type="text" name="todayDatePueblaRegreso" [minDate]="todayDatePuebla" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
-  		</div>
+      <div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 ">
+        <label>Selecciona ida y regreso</label>
+      </div>
+      <div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 ">
+        <input id="viaje" type="text" name="todayDatePueblaRegreso" [minDate]="todayDatePuebla" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+      </div>
 
-			<div class="col-12 col-md-6 col-xl-6 ">
-  			<label>¿Cuántos viajan?</label>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6 ">
+
+      <div class="col-12 col-md-6 col-xl-6  ">
+        <label for="show-passengers2">¿Cuántos viajan?</label>
+      </div>
+      <div class="col-12 col-md-5 col-xl-5 ">
+        <div class="show-passengers gradient-show-passengers" id="show-passengers2">
+          <p id="ticketfor2">1 Adulto </p>
+          <img src="https://aeropuertoer.com.mx/airport/img/down-arrow.png" id="rotx2" alt="Flechita" class="rotated">
+        </div>
+        <div class="list-passengers" id="list-passengers2" style="display: none;">
+          <div class="numbers-row secound-field">
+            <input type="text" name="A" id="adult2" value="1" readonly="readonly">
+            <label id="adult-label" for="name">Adulto <br> (13-59 años)</label>
+            <div class="inc button2">+</div>
+            <div class="dec button2">-</div>
+          </div>
+          <div class="numbers-row secound-field">
+            <input type="text" name="M" id="children2" value="0" readonly="readonly">
+            <label for="name">Menor <br> (4-12 años)</label>
+            <div class="inc button2">+</div>
+            <div class="dec button2">-</div>
+          </div>
+          <div class="numbers-row secound-field">
+            <input type="text" name="S" id="inapam2" value="0" readonly="readonly">
+            <label for="name">INAPAM <br> (60-más)</label>
+            <div class="inc button2">+</div>
+            <div class="dec button2">-</div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!--<div class="col-12 col-md-6 col-xl-6 ">
 				<input [(ngModel)]="selectedAsientosNumberPuebla" type="number" min="1" max="5" id="viaje" value="1" name="">
-  		</div>
+  		</div>-->
 
       <div class="col-12 col-md-12 col-xl-12 divViaje">
         <button data-dismiss="modal" (click)="checkValuesPuebla()" class="btnViaje">Inicia tu viaje</button>
@@ -104,43 +135,43 @@
 <!-- Inicio del modal de mexico-->
 <div #muestraMex id="miModal" class="modal">
   <div class="modal-contenido">
-  	<div class="row">
-  		<div class="col-10 col-md-10 col-xl-10"></div>
-  		<div class="col-2 col-md-2 col-xl-2">
-  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-  				<span aria-hidden="true">&times;</span>
-        	</button>
-  		</div>
-  		<div class="col-6 col-md-6 col-xl-6 sencilloDiv">
-  			<button (click)='setTipoViajeIda(true);setTipoViajeRedondo(false);' class="sencillo"></button>
-  			<p class="sencillo1">Sencillo</p>
-  		</div>
-  		<div class="col-6 col-md-6 col-xl-6 redondoDiv">
-  			<button (click)='setTipoViajeRedondo(true);setTipoViajeIda(false);' class="redondo"></button>
-  			<p class="redondo1">Redondo</p>
-  		</div>
-  	</div>
-  	<div class="row">
-  		<div class="col-12 col-md-6 col-xl-6 ">
-  			<label>¿De dónde sales?</label>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6 ">
-  			<select [(ngModel)]="selectedValueMexicoDondeSales" id="viaje">
-  				<option *ngFor="let option of optionsMexicoDondeSales" [value]="option.value">{{option.name}}</option>
-  			</select>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6">
-  			<label>¿A dónde llegas?</label>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6">
-  			<select [(ngModel)]="selectedValueMexicoDondeLlegas" id="viaje">
-  				<option *ngFor="let option of optionsMexicoDondeLlegas" [value]="option.value">{{option.name}}</option>
-  			</select>
-  		</div>
+    <div class="row">
+      <div class="col-10 col-md-10 col-xl-10"></div>
+      <div class="col-2 col-md-2 col-xl-2">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="col-6 col-md-6 col-xl-6 sencilloDiv">
+        <button (click)='setTipoViajeIda(true);setTipoViajeRedondo(false);' class="sencillo"></button>
+        <p class="sencillo1">Sencillo</p>
+      </div>
+      <div class="col-6 col-md-6 col-xl-6 redondoDiv">
+        <button (click)='setTipoViajeRedondo(true);setTipoViajeIda(false);' class="redondo"></button>
+        <p class="redondo1">Redondo</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-6 ">
+        <label>¿De dónde sales?</label>
+      </div>
+      <div class="col-12 col-md-6 col-xl-6 ">
+        <select [(ngModel)]="selectedValueMexicoDondeSales" id="viaje">
+          <option *ngFor="let option of optionsMexicoDondeSales" [value]="option.value">{{option.name}}</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-6 col-xl-6">
+        <label>¿A dónde llegas?</label>
+      </div>
+      <div class="col-12 col-md-6 col-xl-6">
+        <select [(ngModel)]="selectedValueMexicoDondeLlegas" id="viaje">
+          <option *ngFor="let option of optionsMexicoDondeLlegas" [value]="option.value">{{option.name}}</option>
+        </select>
+      </div>
       <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6">
         <label>¿Qué día es tu viaje?</label>
       </div>
-      <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 " >
+      <div *ngIf="valueIda" class="col-12 col-md-6 col-xl-6 ">
         <input id="viaje" name="todayDateMexico" type="text" #dp="bsDatepicker" bsDatepicker [bsValue]="todayDateMexico" [minDate]="todayDateMexico">
       </div>
 
@@ -150,16 +181,38 @@
       <div *ngIf="valueRedondo" class="col-12 col-md-6 col-xl-6 ">
         <input id="viaje" type="text" name="todayDateMexicoRegreso" [minDate]="todayDateMexico" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
       </div>
-  		<div class="col-12 col-md-6 col-xl-6 ">
-  			<label>¿Cuántos viajan?</label>
-  		</div>
-  		<div class="col-12 col-md-6 col-xl-6 ">
-  			<input [(ngModel)]="selectedAsientosNumberMexico" type="number" min="1" max="5" id="viaje" value="1" name="">
-  		</div>
-  		<div class="col-12 col-md-12 col-xl-12 divViaje">
-  			<button data-dismiss="modal" (click)="checkValuesMexico()"  class="btnViaje">Inicia tu viaje</button>
-  		</div>
-  	</div>
+      <div class="col-12 col-md-6 col-xl-6  ">
+        <label for="show-passengers2">¿Cuántos viajan?</label>
+      </div>
+      <div class="col-12 col-md-5 col-xl-5 ">
+        <div class="show-passengers gradient-show-passengers" id="show-passengers3">
+          <p id="ticketfor3">1 Adulto </p>
+          <img src="https://aeropuertoer.com.mx/airport/img/down-arrow.png" id="rotx3" alt="Flechita" class="rotated">
+        </div>
+        <div class="list-passengers" id="list-passengers3" style="display: none;">
+          <div class="numbers-row secound-field">
+            <input type="text" name="A" id="adult3" value="1" readonly="readonly">
+            <label id="adult-label" for="name">Adulto <br> (13-59 años)</label>
+            <div class="inc button2">+</div>
+            <div class="dec button2">-</div>
+          </div>
+          <div class="numbers-row secound-field">
+            <input type="text" name="M" id="children3" value="0" readonly="readonly">
+            <label for="name">Menor <br> (4-12 años)</label>
+            <div class="inc button2">+</div>
+            <div class="dec button2">-</div>
+          </div>
+          <div class="numbers-row secound-field">
+            <input type="text" name="S" id="inapam3" value="0" readonly="readonly">
+            <label for="name">INAPAM <br> (60-más)</label>
+            <div class="inc button2">+</div>
+            <div class="dec button2">-</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-xl-12 divViaje">
+          <button data-dismiss="modal" (click)="checkValuesMexico()" class="btnViaje">Inicia tu viaje</button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<app-footer></app-footer>
+  <app-footer></app-footer>

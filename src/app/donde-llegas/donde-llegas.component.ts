@@ -64,6 +64,21 @@ export class DondeLlegasComponent implements OnInit {
     }
   ];
 
+  optionsPueblaQty = [
+    {
+      value: 'Adulto',
+      name : "Adulto (13-59 años)"
+    },
+    {
+      value: 'AEROT2',
+      name : "Menor (4-12 años)"
+    },
+    {
+      value: 'AA',
+      name: 'INAPAM (60-más)'
+    }
+  ];
+
   optionsMexicoDondeLlegas = [
     {
       value: 'AERO',
@@ -105,6 +120,8 @@ export class DondeLlegasComponent implements OnInit {
 
   	ngOnInit() {
       this.getServerStatus();
+      this.setUPER();
+      this.setUPER2();
       this.lockButtons = true;
     }
 
@@ -121,13 +138,167 @@ export class DondeLlegasComponent implements OnInit {
 			);
     }
 
+    setUPER(){
+      var adult    = $("#adult2");
+      var children = $("#children2");
+      var inapam   = $("#inapam2");
+      var showPassengers = $( "div#show-passengers2" );
+      var listPassengers = $( "#list-passengers2" );
+      var rotate = $('#rotx2');
+      $(".button2").on("click", function() {
+          var xx = parseInt(adult.val()) + parseInt(children.val()) + parseInt(inapam.val());
+          var $button = $(this);
+          if ( xx < 10 || $button.text() == "-") {
+              var oldValue = $button.parent().find("input").val();
+              var newVal = 0;
+              if ($button.text() == "+") {
+                  newVal = parseFloat(oldValue) + 1;
+              } else {
+                  // Don't allow decrementing below zero
+                  if (oldValue > 0) {
+                      newVal = parseFloat(oldValue) - 1;
+                  } else {
+                      newVal = 0;
+                  }
+              }
+              $button.parent().find("input").val(newVal);
+          }
+          xx = parseInt(adult.val()) + parseInt(children.val()) + parseInt(inapam.val());
+          if(xx >= 10){
+              $button.prop('disabled',true);
+          }
+      });
+      var ticketFor = $("#ticketfor2");
+      showPassengers.click(function(){
+          showPassengers.toggleClass('gradient-show-passengers');
+          listPassengers.slideToggle( "slow", function() {});
+          rotate.toggleClass('rotated');
+          adult.text(adult.val());
+          ticketFor.empty();
+          var $adult,$children,$inapam;
+
+          if(adult.val() > 0){
+              if(adult.val() == 1){
+                  $adult = adult.val() +' Adulto';
+              } else {
+                  $adult = adult.val() +' Adultos';
+              }
+          } else {
+              $adult = '';
+          }
+          if(children.val() > 0){
+              var nTxt = 'Menor';
+              var nBeTxt = ' ';
+              if(children.val() == 1){
+                  nTxt = 'Menor';
+              } else {
+                  nTxt = 'Menores';
+              }
+              if(adult.val() > 0){
+                  nBeTxt = ' / ';
+              }
+              $children = nBeTxt + children.val() + ' ' + nTxt;
+          } else {
+              $children = '';
+          }
+          if(inapam.val() > 0){
+              var iBeTxt = ' ';
+              if(adult.val() > 0 || children.val() > 0 ){
+                  iBeTxt = ' / ';
+              }
+              $inapam = iBeTxt + inapam.val() + ' INAPAM';
+          } else {
+              $inapam = '';
+          }
+
+          ticketFor.text($adult+' '+$children+' '+$inapam);
+      });
+    }
+
+    setUPER2(){
+      var adult    = $("#adult3");
+      var children = $("#children3");
+      var inapam   = $("#inapam3");
+      var showPassengers = $( "div#show-passengers3" );
+      var listPassengers = $( "#list-passengers3" );
+      var rotate = $('#rotx3');
+      $(".button2").on("click", function() {
+          var xx = parseInt(adult.val()) + parseInt(children.val()) + parseInt(inapam.val());
+          var $button = $(this);
+          if ( xx < 10 || $button.text() == "-") {
+              var oldValue = $button.parent().find("input").val();
+              var newVal = 0;
+              if ($button.text() == "+") {
+                  newVal = parseFloat(oldValue) + 1;
+              } else {
+                  // Don't allow decrementing below zero
+                  if (oldValue > 0) {
+                      newVal = parseFloat(oldValue) - 1;
+                  } else {
+                      newVal = 0;
+                  }
+              }
+              $button.parent().find("input").val(newVal);
+          }
+          xx = parseInt(adult.val()) + parseInt(children.val()) + parseInt(inapam.val());
+          if(xx >= 10){
+              $button.prop('disabled',true);
+          }
+      });
+      var ticketFor = $("#ticketfor3");
+      showPassengers.click(function(){
+          showPassengers.toggleClass('gradient-show-passengers');
+          listPassengers.slideToggle( "slow", function() {});
+          rotate.toggleClass('rotated');
+          adult.text(adult.val());
+          ticketFor.empty();
+          var $adult,$children,$inapam;
+
+          if(adult.val() > 0){
+              if(adult.val() == 1){
+                  $adult = adult.val() +' Adulto';
+              } else {
+                  $adult = adult.val() +' Adultos';
+              }
+          } else {
+              $adult = '';
+          }
+          if(children.val() > 0){
+              var nTxt = 'Menor';
+              var nBeTxt = ' ';
+              if(children.val() == 1){
+                  nTxt = 'Menor';
+              } else {
+                  nTxt = 'Menores';
+              }
+              if(adult.val() > 0){
+                  nBeTxt = ' / ';
+              }
+              $children = nBeTxt + children.val() + ' ' + nTxt;
+          } else {
+              $children = '';
+          }
+          if(inapam.val() > 0){
+              var iBeTxt = ' ';
+              if(adult.val() > 0 || children.val() > 0 ){
+                  iBeTxt = ' / ';
+              }
+              $inapam = iBeTxt + inapam.val() + ' INAPAM';
+          } else {
+              $inapam = '';
+          }
+
+          ticketFor.text($adult+' '+$children+' '+$inapam);
+      });
+    }
+
     iniciarSesion(){
       this.lockButtons = true;
       this.alertRegister = null;
       this._totemService.getIDFromLogin().subscribe(
 				response => {
             //console.log(response.sesionID);
-            if(response.sesionID == 0){              
+            if(response.sesionID == 0){
               this.lockButtons = false;
               this.serverLives = false;
               this.alertRegister = '¡Oops! Server no disponible';
@@ -138,7 +309,7 @@ export class DondeLlegasComponent implements OnInit {
               this.identity = identity;
               this.alertRegister = null;
               localStorage.setItem('myID', JSON.stringify(identity));
-            }            
+            }
 				},
 				error => {
           this.serverLives = false;
@@ -148,7 +319,7 @@ export class DondeLlegasComponent implements OnInit {
     }
 
     checkValuesPuebla(){
-      
+
 
       if(this.serverLives == true){
         if(this.selectedValuePueblaDondeSales == null || this.selectedValuePueblaDondeLlegas == null){
@@ -169,10 +340,10 @@ export class DondeLlegasComponent implements OnInit {
                     llegada: this.selectedValuePueblaDondeLlegas,
                     fech: this.todayDatePuebla,
                     fecReg: this.todayDatePueblaRegreso,
-                    asientos: this.selectedAsientosNumberPuebla
+                    asientos: this.ticketfor2
                   }
                 });
-              }              
+              }
             }
           }else{
             if(this.todayDatePuebla == null){
@@ -187,7 +358,7 @@ export class DondeLlegasComponent implements OnInit {
                     salida: this.selectedValuePueblaDondeSales,
                     llegada: this.selectedValuePueblaDondeLlegas,
                     fech: this.todayDatePuebla,
-                    asientos: this.selectedAsientosNumberPuebla
+                    asientos: this.ticketfor2
                   }
                 });
               }
@@ -197,6 +368,7 @@ export class DondeLlegasComponent implements OnInit {
       }else{
         this.alertRegister = 'No podemos consultar corridas, servidor no está disponible';
       }
+
     }
 
     checkValuesMexico(){
@@ -219,7 +391,7 @@ export class DondeLlegasComponent implements OnInit {
                     llegada: this.selectedValueMexicoDondeLlegas,
                     fech: this.todayDateMexico,
                     fecReg: this.todayDateMexicoRegreso,
-                    asientos: this.selectedAsientosNumberMexico
+                    asientos: this.ticketfor3
                   }
                 });
               }
@@ -237,7 +409,7 @@ export class DondeLlegasComponent implements OnInit {
                     salida: this.selectedValueMexicoDondeSales,
                     llegada: this.selectedValueMexicoDondeLlegas,
                     fech: this.todayDateMexico,
-                    asientos: this.selectedAsientosNumberMexico
+                    asientos: this.ticketfor3
                   }
                 });
               }

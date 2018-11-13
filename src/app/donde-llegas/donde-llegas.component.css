@@ -263,6 +263,161 @@ label{
   padding: 6px 12px;
 }
 
+/* DROPDOWN */
+.show-passengers {
+  margin-top: 7px;
+  margin-right: 10px;
+  background: white;
+  color: black;
+  height: 43px;
+  border: 1px solid #d7d7d7;
+  line-height: 43px;
+  position: relative;
+}
+
+.show-passengers p {
+  padding: 0;
+  padding-left: 8px;
+  font-size: 12px !important;
+  font-family: Ak-Medium !important;
+  font-weight: bold;
+  color: #17a0db !important;
+  max-width: 262px;
+  display: inline-block;
+  padding-right: 45px;
+  margin: 0 auto !important;
+  margin-top: 12px !important;
+  text-align: left;
+  vertical-align: middle;
+  line-height: normal;
+  float: left;
+}
+
+.show-passengers img {
+  padding-left: 25px;
+  font: 15px Helvetica, sans-serif;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 4em;
+}
+
+.show-passengers img.rotated {
+  transform: rotateX(0deg);
+}
+
+.gradient-show-passengers {
+  -o-border-image: linear-gradient(to right, #0048b9 0%, #17a0db 30%, #d60136 100%);
+     border-image: linear-gradient(to right, #0048b9 0%, #17a0db 30%, #d60136 100%);
+  border-image-slice: 1;
+}
+
+.list-passengers {
+  margin-right: 10px;
+  background: white;
+  border: 2px solid transparent;
+  display: none;
+  -o-border-image: linear-gradient(to right, #0048b9 0%, #17a0db 30%, #d60136 100%);
+     border-image: linear-gradient(to right, #0048b9 0%, #17a0db 30%, #d60136 100%);
+  border-image-slice: 1;
+  border-top: 1px solid transparent;
+  position: relative;
+  z-index: 400;
+}
+
+.numbers-row {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 15px 5px 15px;
+  overflow: hidden;
+  background: white;
+  width: 100%;
+  position: relative;
+}
+
+.numbers-row:last-child {
+  border-bottom: none;
+}
+
+.numbers-row label {
+  font-size: 14px;
+  display: block;
+  float: left;
+  text-align: left;
+  padding: 5px 5px 0 0;
+  max-width: 100%;
+  color: #333;
+}
+
+input[name=A], input[name=M], input[name=S] {
+  color: black;
+  float: left;
+  width: 20px;
+  font-size: 12px;
+  font-family: Ak-Medium;
+  padding: 3px 0 0 0;
+  text-align: center;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.button {
+  margin: 15px 0 0 9px;
+  position: relative;
+  text-indent: -9999px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+  float: right;
+  text-align: center;
+  background: url("https://aeropuertoer.com.mx/airport/img/plus-minus-buttons.png") no-repeat;
+  background-size: 45px 45px;
+}
+
+.button2 {
+  margin: 15px 0 0 9px;
+  position: relative;
+  text-indent: -9999px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+  float: right;
+  text-align: center;
+  background: url("https://aeropuertoer.com.mx/airport/img/plus-minus-buttons.png") no-repeat;
+  background-size: 45px 45px;
+}
+
+.button3 {
+  margin: 0 0 0 9px;
+  position: relative;
+  text-indent: -9999px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+  float: right;
+  text-align: center;
+  background: url("https://aeropuertoer.com.mx/airport/img/plus-minus-buttons.png") no-repeat;
+  background-size: 45px 45px;
+}
+
+
+
+.inc {
+  background-position: 0 -22px;
+  padding: 0;
+}
+
+.inc:hover {
+  background-position: -23px -23px;
+}
+
+.dec {
+  background-position: 0 0;
+}
+
+.dec:hover {
+  background-position: -23px 0px;
+}
+
 
 select#viaje {
   margin: 0.3vw;
