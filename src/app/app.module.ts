@@ -25,6 +25,14 @@ import { TouristerComponent } from './tourister/tourister.component';
 
 import { BoletoComponent } from './boleto/boleto.component';
 import { RolloComponent } from './rollo/rollo.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -48,6 +56,8 @@ import { RolloComponent } from './rollo/rollo.component';
     routing,
     FormsModule,
     ReactiveFormsModule,
+    MatTabsModule,
+    NgbModule,
     BsDatepickerModule.forRoot()  
   ],
   providers: [appRoutingProviders],
