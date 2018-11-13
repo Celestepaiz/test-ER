@@ -96,11 +96,16 @@ width: 100%;
     display: block;
     padding: 14px 29px 10px 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     transition: all 0.5s;
 =======
     
     cursor: pointer;
 >>>>>>> 23a754f5468c9b6f263db2e882657f2cc9a48496
+=======
+    cursor: pointer;
+
+>>>>>>> b7dc490c6ed8c7e59189f1b664d5c253af0b5454
 }
 
 .asiento-ocupado{
@@ -165,8 +170,6 @@ width: 100%;
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-=======
 
 .fondo2{
   margin-left: -15px;
@@ -193,5 +196,3 @@ width: 100%;
 
 
 
-
->>>>>>> 69a367bdff08c9d015bee8014815048ae1e456f0
