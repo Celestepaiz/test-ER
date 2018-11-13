@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div id="container" class="fondo1">
   <header></header>
 
@@ -49,50 +50,65 @@
     </div>
   </form>
     <br>
-
-    <div class="container box" style="width:700px; margin:0 auto; border:1px solid #cecece;">
-
-      <div class="row">
-        <div class="col"><br>
-          <h5>{{ today | date:'short' }}</h5>
-          
-          <h6><b>Nombre:</b> {{ name.value }} {{ lastName.value}}</h6>
-          <h6><b>Correo:</b>{{ email.value }}</h6>
-          <h6><b>Origen:</b> Puebla</h6>
-          <h6><b>Destino:</b> Terminal 1 CDMX</h6>
-          <h6><b>Asiento:</b> 20</h6>
-          <h6><b>Hora:</b> 13:30</h6>
+    <div class="fondo1 text-center">
+      <div class="card-header">
+        Estrella Roja
+      </div>
+      <div class="event">
+        <div class="event-side">
+          <div class="cut-out"></div>
         </div>
-        <div class="col "><br>
-          <h6 align="right">Precio: $300</h6>
-          <h6 align="right">Descuento: $0</h6><br><br><br>
-          <h5 align="right">Total: 300</h5>
-
+        <div class="event-body">
+          <div class="boleto black">
+            Boleto Sencillo
+          </div>
+          <div class="fecha">
+            <h5>{{ today | date:'short' }}</h5>
+          </div>
+          <div class="cliente">
+            {{ name.value }} {{ lastName.value}}
+          </div>
+          <div class="cliente">
+              {{ email.value }}
+          </div>
+          <div class="origen-destino txt-blue">
+            PUE - AEROPUERTO
+          </div>
+          <div class="d-flex justify-content-around">
+            <div class="tarifa-asiento d-flex justify-content-around">
+              <h6 class="dark-blue">Tarifa:</h6>
+              <h6>$300</h6>
+            </div>
+            <div class="tarifa-asiento d-flex justify-content-around">
+              <h6 class="dark-blue">Descuento:</h6>
+              <h6>$0</h6>
+            </div>
+            <div class="tarifa-asiento d-flex justify-content-around">
+              <h6 class="dark-blue">Total:</h6>
+              <h6>$0</h6>
+            </div>
+          </div>
+          <div class="tarifa-asiento d-flex justify-content-around">
+            <h6 class="dark-blue">Asiento:</h6>
+            <h6>20</h6>
+          </div>
+          <div class="back"></div>
         </div>
       </div>
-
+      <br><br><br>
+      <div class="card-footer text-muted">
+        Aeropuerto
+      </div>
     </div>
     <br>
-
-
-    <div class="container box" style="width:700px; margin:0 auto; border:1px solid #cecece;">
-
-
-      
-        <h5 align="center">Pago</h5>
+    <div class="container box text-center" style="width:700px; margin:0 auto; border:1px solid #cecece;">
+        <h5>Pago</h5>
         <br>
-        <h6 align="center">Paga y recibe tu boleto en tu correo electrónico</h6>\
+        <h6>Paga y recibe tu boleto en tu correo electrónico</h6>\
         <h2 *ngIf="paypalLoad">Cargando...</h2> 
-          <div id="paypal-button-container" align="center"></div>
-      
-     
-      
-      
-      
-
+          <div id="paypal-button-container" class="text-center"></div>
     </div>
   </section>
 </div>
 <br>
-
 <app-footer></app-footer>
