@@ -24,6 +24,15 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TouristerComponent } from './tourister/tourister.component';
 
 import { BoletoComponent } from './boleto/boleto.component';
+import { RolloComponent } from './rollo/rollo.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
+
+
+
+
 import { NavbarPrincipalComponent } from './navbar-principal/navbar-principal.component';
 import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister.component';
 
@@ -40,6 +49,7 @@ import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister
     LandingPageComponent,
     TouristerComponent,
     BoletoComponent,
+    RolloComponent,
     NavbarPrincipalComponent,
     NavabarTouristerComponent
   ],
@@ -50,6 +60,8 @@ import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister
     routing,
     FormsModule,
     ReactiveFormsModule,
+    MatTabsModule,
+    NgbModule,
     BsDatepickerModule.forRoot()  
   ],
   providers: [appRoutingProviders],
