@@ -209,7 +209,7 @@
   		<div class="col-12 col-md-6 col-xl-6 ">
 				<!--<input [(ngModel)]="selectedAsientosNumberMexico" type="number" min="1" max="5" id="viaje" value="1" name="">-->
 				<div class="btn-group" dropdown [autoClose]="false">
-						<button id="button-autoclose2" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+						<button id="viaje" dropdownToggle type="button"
 										aria-controls="dropdown-autoclose2">
 							Adultos: {{contadorAdultosMexico}}, Niños: {{contadorNiniosMexico}}, Inapam: {{contadorInapamMexico}}<span class="caret"></span>
 						</button>
@@ -218,13 +218,13 @@
 								<a>
 									<div class="row">
 										<div class="col-md-3 col-xl-3 quitar-padding">
-											<button (click)="aumentaAdultoMexico('menos')" type="button" class="btn btn-success">-</button>
+											<button (click)="aumentaAdultoMexico('menos')" type="button" class="btnMenos">-</button>
 										</div>
 										<div class="col-md-6 col-xl-6 quitar-padding text-center">
 											Adulto: {{contadorAdultosMexico}}
 										</div>
 										<div class="col-md-3 col-xl-3 quitar-padding">
-											<button (click)="aumentaAdultoMexico('mas')" type="button" class="btn btn-primary">+</button>
+											<button (click)="aumentaAdultoMexico('mas')" type="button" class="btnMas">+</button>
 										</div>
 									</div>								  
 								</a>
@@ -233,13 +233,13 @@
 								<a>
 									<div class="row">									
 										<div class="col-md-3 col-xl-3 quitar-padding">
-											<button (click)="aumentaNinioMexico('menos')" type="button" class="btn btn-success">-</button>
+											<button (click)="aumentaNinioMexico('menos')" type="button" class="btnMenos">-</button>
 										</div>
 										<div class="col-md-6 col-xl-6 quitar-padding text-center">
 											Niño: {{contadorNiniosMexico}}
 										</div>
 										<div class="col-md-3 col-xl-3 quitar-padding">
-											<button (click)="aumentaNinioMexico('mas')" type="button" class="btn btn-primary">+</button>
+											<button (click)="aumentaNinioMexico('mas')" type="button" class="btnMas">+</button>
 										</div>									
 									</div>								  
 								</a>
@@ -248,13 +248,13 @@
 								<a>
 									<div class="row">
 										<div class="col-md-3 col-xl-3 quitar-padding">
-											<button (click)="aumentaInapamMexico('menos')" type="button" class="btn btn-success">-</button>
+											<button (click)="aumentaInapamMexico('menos')" type="button" class="btnMenos">-</button>
 										</div>
 										<div class="col-md-6 col-xl-6 quitar-padding text-center">
 											INAPAM: {{contadorInapamMexico}}
 										</div>
 										<div class="col-md-3 col-xl-3 quitar-padding">
-											<button (click)="aumentaInapamMexico('mas')" type="button" class="btn btn-primary">+</button>
+											<button (click)="aumentaInapamMexico('mas')" type="button" class="btnMas">+</button>
 										</div>
 									</div>								  
 								</a>
