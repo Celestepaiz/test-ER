@@ -1,0 +1,96 @@
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #c0392b;
+  font-family: Raleway;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.card-form{
+  width: 500px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+  .title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #1d4ab8 !important;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .form-body{
+    padding: 10px;
+  }
+    .row{
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+      .input{
+        appearance: none;
+        width: 100%;
+        margin: 0 15px;
+        height: 35px;
+        padding: 5px 15px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        background: #e8ebed;
+        color: #576366;
+        font-size: 14px;
+      }
+
+  .rule{
+    height: 2px;
+    background: #e8ebed;
+    margin: 0px 35px;
+  }
+  
+  .form-footer{
+    margin: 0 25px 15px 25px;
+    padding: 15px 10px;}
+
+ .button{
+    width: 40%;
+    display: inline-block;
+    padding: 0.5em 2.5em;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: 12pt;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+    color: #fff;
+    background-color: #e8132f;
+ }
+ .text{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18pt;
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+    color: #1aa2de;
+ }
+ .description{
+  color: #595959;
+  font-weight: bold;
+  padding-left: 0px;
+  margin-left: 0px;
+ }
+   
+
