@@ -19,7 +19,9 @@ export class AsientosComponent implements OnInit {
   public fechaSalida;
   public fechaRegreso;
   public claveViaje;
-  public asientos;
+  public asientosAdulto;
+  public asientosNinio;
+  public asientosInapam;
 
   public contador;
 
@@ -50,7 +52,9 @@ export class AsientosComponent implements OnInit {
       this.llegada = params['llegada'] || null;
       this.fechaSalida = params['fech'] || null;
       this.claveViaje = params['clave'] || null;
-      this.asientos = params['asientos'] || null;
+      this.asientosAdulto = params['asientosAdulto'] || null;
+      this.asientosNinio = params['asientosNinio'] || null;
+      this.asientosInapam = params['asientosInapam'] || null;     
     });    
   }
 
@@ -60,7 +64,9 @@ export class AsientosComponent implements OnInit {
         salida: this.salida,
         llegada: this.llegada,
         fech: this.fechaSalida,
-        asientos: this.asientos     
+        asientosAdulto: this.asientosAdulto,
+        asientosNinio: this.asientosNinio,
+        asientosInapam: this.asientosInapam    
       }
     });
   }

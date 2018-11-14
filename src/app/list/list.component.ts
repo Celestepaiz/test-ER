@@ -22,7 +22,9 @@ export class ListComponent implements OnInit {
   public llegada;
   public fechaSalida;
   public fechaRegreso;
-  public asientos;
+  public asientosAdulto;
+  public asientosNinio;
+  public asientosInapam;
 
   public loading: boolean;
   public noCorridas: boolean;
@@ -45,28 +47,22 @@ export class ListComponent implements OnInit {
         this.llegada = params['llegada'] || null;
         this.fechaSalida = params['fech'] || null;
         this.fechaRegreso = params['fecReg'] || null;
-        this.asientos = params['asientos'] || null;
+        this.asientosAdulto = params['asientosAdulto'] || null;
+        this.asientosNinio = params['asientosNinio'] || null;
+        this.asientosInapam = params['asientosInapam'] || null;     
       });
 
       //Validaciones de que existan parametros
       if(this.salida == null || this.llegada == null){
         this._router.navigate(['donde-sales']);
       }else{
-        if(this.fechaRegreso != null){ //Aqui hay fecha de Regreso
-          if(this.asientos != null){
-            console.log('Todo esta bien en el viaje redondo');
-            this.consultaCorridas(true);
-          }else{
-            this._router.navigate(['donde-sales']);
-          }          
+        if(this.fechaRegreso != null){ //Aqui hay fecha de Regreso          
+          console.log('Todo esta bien en el viaje redondo');
+          this.consultaCorridas(true);          
         }else{ //Aqui no lo hay
-          if(this.fechaSalida != null){
-            if(this.asientos != null){
-              console.log('Todo esta bien en el viaje sencillo');
-              this.consultaCorridas(false); 
-            }else{
-              this._router.navigate(['donde-sales']);
-            }            
+          if(this.fechaSalida != null){            
+            console.log('Todo esta bien en el viaje sencillo');
+            this.consultaCorridas(false);             
           }else{
             this._router.navigate(['donde-sales']);
           }
@@ -147,7 +143,9 @@ export class ListComponent implements OnInit {
         llegada: this.llegada,
         fech: myFecha,
         clave: claveViaje,
-        asientos: this.asientos
+        asientosAdulto: this.asientosAdulto,
+        asientosNinio: this.asientosNinio,
+        asientosInapam: this.asientosInapam
       }
     });
   }
