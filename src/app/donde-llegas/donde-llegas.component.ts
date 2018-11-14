@@ -274,7 +274,7 @@ export class DondeLlegasComponent implements OnInit {
             if(this.todayDatePueblaRegreso == null){
               this.alertRegister = 'Selecciona una fecha para tu viaje de regreso';
             }else{
-              if(this.selectedAsientosNumberPuebla == null){
+              if(this.contadorAdultos == 0 && this.contadorNinios == 0 && this.contadorInapam == 0){
                 this.alertRegister = 'Selecciona el número de asientos';
               }else{
                 this.alertRegister = null;  // Aqui todo esta bien en el viaje redondo
@@ -284,7 +284,9 @@ export class DondeLlegasComponent implements OnInit {
                     llegada: this.selectedValuePueblaDondeLlegas,
                     fech: this.todayDatePuebla,
                     fecReg: this.todayDatePueblaRegreso,
-                    asientos: this.selectedAsientosNumberPuebla
+                    asientosAdulto: this.contadorAdultos,
+                    asientosNinio: this.contadorNinios,
+                    asientosInapam: this.contadorInapam
                   }
                 });
               }              
@@ -293,8 +295,8 @@ export class DondeLlegasComponent implements OnInit {
             if(this.todayDatePuebla == null){
               this.alertRegister = 'Selecciona una fecha para tu viaje de ida';
             }else{
-              if(this.selectedAsientosNumberPuebla == null){
-                this.alertRegister = 'Selecciona el número de asientos';
+              if(this.contadorAdultos == 0 && this.contadorNinios == 0 && this.contadorInapam == 0){
+                this.alertRegister = 'Selecciona el número de asientos';                
               }else{
                 this.alertRegister = null;  // Aqui todo esta bien en el viaje no redondo
                 this._router.navigate(['list'], {
@@ -302,7 +304,9 @@ export class DondeLlegasComponent implements OnInit {
                     salida: this.selectedValuePueblaDondeSales,
                     llegada: this.selectedValuePueblaDondeLlegas,
                     fech: this.todayDatePuebla,
-                    asientos: this.selectedAsientosNumberPuebla
+                    asientosAdulto: this.contadorAdultos,
+                    asientosNinio: this.contadorNinios,
+                    asientosInapam: this.contadorInapam
                   }
                 });
               }
@@ -324,7 +328,7 @@ export class DondeLlegasComponent implements OnInit {
             if(this.todayDateMexicoRegreso == null){
               this.alertRegister = 'Selecciona una fecha para tu viaje de regreso';
             }else{
-              if(this.selectedAsientosNumberMexico == null){
+              if(this.contadorAdultosMexico == 0 && this.contadorNiniosMexico == 0 && this.contadorInapamMexico == 0){
                 this.alertRegister = 'Selecciona el número de asientos';
               }else{
                 this.alertRegister = null; // Aqui todo esta bien en el viaje redondo
@@ -334,7 +338,9 @@ export class DondeLlegasComponent implements OnInit {
                     llegada: this.selectedValueMexicoDondeLlegas,
                     fech: this.todayDateMexico,
                     fecReg: this.todayDateMexicoRegreso,
-                    asientos: this.selectedAsientosNumberMexico
+                    asientosAdulto: this.contadorAdultosMexico,
+                    asientosNinio: this.contadorNiniosMexico,
+                    asientosInapam: this.contadorInapamMexico
                   }
                 });
               }
@@ -343,7 +349,7 @@ export class DondeLlegasComponent implements OnInit {
             if(this.todayDateMexico == null){
               this.alertRegister = 'Selecciona una fecha para tu viaje de ida';
             }else{
-              if(this.selectedAsientosNumberMexico == null){
+              if(this.contadorAdultosMexico == 0 && this.contadorNiniosMexico == 0 && this.contadorInapamMexico == 0){
                 this.alertRegister = 'Selecciona el número de asientos';
               }else{
                 this.alertRegister = null;  // Aqui todo esta bien en el viaje no redondo
@@ -352,7 +358,9 @@ export class DondeLlegasComponent implements OnInit {
                     salida: this.selectedValueMexicoDondeSales,
                     llegada: this.selectedValueMexicoDondeLlegas,
                     fech: this.todayDateMexico,
-                    asientos: this.selectedAsientosNumberMexico
+                    asientosAdulto: this.contadorAdultosMexico,
+                    asientosNinio: this.contadorNiniosMexico,
+                    asientosInapam: this.contadorInapamMexico
                   }
                 });
               }
