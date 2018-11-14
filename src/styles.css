@@ -176,14 +176,13 @@ width: 100%;
 
 
 .fondo3{
-  margin-left: -15px;
-  margin-right: -15px;
   background-image: url(/assets/img/fontoTourister.png);
   background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-repeat: no-repeat; 
+  background-attachment: relative;
+  height: 100vh;
+  width: 100vw;
   background-size: cover;
-  overflow: hidden;
 }
 
 
