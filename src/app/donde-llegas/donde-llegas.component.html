@@ -89,44 +89,9 @@
   			<label>¿Cuántos viajan?</label>
   		</div>
   		<div class="col-12 col-md-6 col-xl-6 ">
-<<<<<<< HEAD
-				<input [(ngModel)]="selectedAsientosNumberPuebla" type="number" min="1" max="5" id="viaje" value="1" name="">
-  		</div>
-          <div class="row">
-      <div class="col-xs-12 col-12 col-sm-6 mb-3">
-        <p>Default behavior: dropdown closes after outside click or pressing ESC</p>
-        <div class="btn-group" dropdown>
-          <button id="button-autoclose1" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-                  aria-controls="dropdown-autoclose1">
-            Button dropdown <span class="caret"></span>
-          </button>
-          <ul id="dropdown-autoclose1" *dropdownMenu class="dropdown-menu"
-              role="menu" aria-labelledby="button-autoclose1">
-            <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-xs-12 col-12 col-sm-6 mb-3">
-        <p>This dropdown won't be closed after outside click or pressing ESC</p>
-        <div class="btn-group" dropdown [autoClose]="false">
-          <button id="button-autoclose2" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-                  aria-controls="dropdown-autoclose2">
-            Button dropdown <span class="caret"></span>
-          </button>
-          <ul id="dropdown-autoclose2" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-autoclose2">
-            <li role="menuitem"><a class=" >Action</a></li>
-            <li role="menuitem"><a class="dropdown-item" >Another action</a></li>
-            <li role="menuitem"><a class="dropdown-item" >Something else here</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-=======
 				<!--<input [(ngModel)]="selectedAsientosNumberPuebla" type="number" min="1" max="5" id="viaje" value="1" name="">-->
 				<div class="btn-group" dropdown [autoClose]="false">
-					<button id="button-autoclose2" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+					<button id="viaje" dropdownToggle type="button" 
 									aria-controls="dropdown-autoclose2">
 						Adultos: {{contadorAdultos}}, Niños: {{contadorNinios}}, Inapam: {{contadorInapam}}<span class="caret"></span>
 					</button>
@@ -135,13 +100,13 @@
 							<a>
 								<div class="row">
 									<div class="col-md-3 col-xl-3 quitar-padding">
-										<button (click)="aumentaAdulto('menos')" type="button" class="btn btn-success">-</button>
+										<button (click)="aumentaAdulto('menos')" type="button" class="btnMenos">-</button>
 									</div>
 									<div class="col-md-6 col-xl-6 quitar-padding text-center">
 										Adulto: {{contadorAdultos}}
 									</div>
 									<div class="col-md-3 col-xl-3 quitar-padding">
-										<button (click)="aumentaAdulto('mas')" type="button" class="btn btn-primary">+</button>
+										<button (click)="aumentaAdulto('mas')" type="button" class="btnMas">+</button>
 									</div>
 								</div>								  
 							</a>
@@ -150,13 +115,13 @@
 							<a>
 								<div class="row">									
 									<div class="col-md-3 col-xl-3 quitar-padding">
-										<button (click)="aumentaNinio('menos')" type="button" class="btn btn-success">-</button>
+										<button (click)="aumentaNinio('menos')" type="button" class="btnMenos">-</button>
 									</div>
 									<div class="col-md-6 col-xl-6 quitar-padding text-center">
 										Niño: {{contadorNinios}}
 									</div>
 									<div class="col-md-3 col-xl-3 quitar-padding">
-										<button (click)="aumentaNinio('mas')" type="button" class="btn btn-primary">+</button>
+										<button (click)="aumentaNinio('mas')" type="button" class="btnMas">+</button>
 									</div>									
 								</div>								  
 							</a>
@@ -165,13 +130,13 @@
 							<a>
 								<div class="row">
 									<div class="col-md-3 col-xl-3 quitar-padding">
-										<button (click)="aumentaInapam('menos')" type="button" class="btn btn-success">-</button>
+										<button (click)="aumentaInapam('menos')" type="button" class="btnMenos">-</button>
 									</div>
 									<div class="col-md-6 col-xl-6 quitar-padding text-center">
 										INAPAM: {{contadorInapam}}
 									</div>
 									<div class="col-md-3 col-xl-3 quitar-padding">
-										<button (click)="aumentaInapam('mas')" type="button" class="btn btn-primary">+</button>
+										<button (click)="aumentaInapam('mas')" type="button" class="btnMas">+</button>
 									</div>
 								</div>								  
 							</a>
@@ -180,8 +145,6 @@
 				</div>
 				
   		</div>          
->>>>>>> 31924fd9b300b2616fe302a4fe19c61add44d6b6
-
       <div class="col-12 col-md-12 col-xl-12 divViaje">
         <button data-dismiss="modal" (click)="checkValuesPuebla()" class="btnViaje">Inicia tu viaje</button>
       </div>
