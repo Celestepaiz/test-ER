@@ -143,6 +143,7 @@ export class ListComponent implements OnInit {
         llegada: this.llegada,
         fech: myFecha,
         clave: claveViaje,
+        tarifa: 300,
         asientosAdulto: this.asientosAdulto,
         asientosNinio: this.asientosNinio,
         asientosInapam: this.asientosInapam

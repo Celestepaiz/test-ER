@@ -5,7 +5,7 @@
   <div class="row">
       <div class="col-md-6 text-center">
           <br><br>
-          <button [routerLink]="['/asientos']" type="button" class="btn btn-primary btn-lg">Regresar</button>
+          <button (click)='vuelveConParametros()' type="button" class="btn btn-primary btn-lg">Regresar</button>
           <br><br><br>
       </div>
   
@@ -77,20 +77,20 @@
           <div class="d-flex justify-content-around">
             <div class="tarifa-asiento d-flex justify-content-around">
               <h6 class="dark-blue">Tarifa:</h6>
-              <h6>$300</h6>
+              <h6 class="dark-blue">$300</h6>
             </div>
             <div class="tarifa-asiento d-flex justify-content-around">
               <h6 class="dark-blue">Descuento:</h6>
-              <h6>$0</h6>
+              <h6 class="dark-blue">$0</h6>
             </div>
             <div class="tarifa-asiento d-flex justify-content-around">
               <h6 class="dark-blue">Total:</h6>
-              <h6>$0</h6>
+              <h6 class="dark-blue">$0</h6>
             </div>
           </div>
           <div class="tarifa-asiento d-flex justify-content-around">
             <h6 class="dark-blue">Asiento:</h6>
-            <h6>20</h6>
+            <h6 class="dark-blue">20</h6>
           </div>
           <div class="back"></div>
         </div>
