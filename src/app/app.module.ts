@@ -26,6 +26,7 @@ import { TouristerComponent } from './tourister/tourister.component';
 import { BoletoComponent } from './boleto/boleto.component';
 import { NavbarPrincipalComponent } from './navbar-principal/navbar-principal.component';
 import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister.component';
+import { DetallesComponent } from './detalles/detalles.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister
     TouristerComponent,
     BoletoComponent,
     NavbarPrincipalComponent,
-    NavabarTouristerComponent
+    NavabarTouristerComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,
