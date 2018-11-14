@@ -21,6 +21,7 @@ import { NavbarComponent } from './components/navbar.component';
 import { FooterComponent } from './components/footer.component';
 
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TouristerComponent } from './tourister/tourister.component';
 
 import { BoletoComponent } from './boleto/boleto.component';
@@ -62,7 +63,8 @@ import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister
     ReactiveFormsModule,
     MatTabsModule,
     NgbModule,
-    BsDatepickerModule.forRoot()  
+    BsDatepickerModule.forRoot(),
+    BsDropdownModule.forRoot()  
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent],
