@@ -33,6 +33,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NavbarPrincipalComponent } from './navbar-principal/navbar-principal.component';
 import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister.component';
 import { DetallesComponent } from './detalles/detalles.component';
+import { FooterTouristerComponent } from './footer-tourister/footer-tourister.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { DetallesComponent } from './detalles/detalles.component';
     RolloComponent,
     NavbarPrincipalComponent,
     NavabarTouristerComponent,
-    DetallesComponent
+    DetallesComponent,
+    FooterTouristerComponent
   ],
   imports: [
     BrowserModule,
