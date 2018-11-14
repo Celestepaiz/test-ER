@@ -9,6 +9,11 @@
   z-index: 9999999;
 }
 
+.quitar-padding{
+  padding-left: unset !important;
+}
+
+
 .loading-container2 .loading-logo {
   position: absolute;
   top: 25vh;
