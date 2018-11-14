@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
+import {formatDate } from '@angular/common';
 import { TotemApisService } from '../services/totem-apis.service';
 
 @Component({
@@ -22,6 +23,8 @@ export class AsientosComponent implements OnInit {
   public asientosAdulto;
   public asientosNinio;
   public asientosInapam;
+
+  public tarifa;
 
   public contador;
 
@@ -52,10 +55,27 @@ export class AsientosComponent implements OnInit {
       this.llegada = params['llegada'] || null;
       this.fechaSalida = params['fech'] || null;
       this.claveViaje = params['clave'] || null;
+      this.tarifa = params['tarifa'] || null;
       this.asientosAdulto = params['asientosAdulto'] || null;
       this.asientosNinio = params['asientosNinio'] || null;
       this.asientosInapam = params['asientosInapam'] || null;     
     });    
+  }
+
+  sendAsientos(){
+    let myFecha = formatDate(this.fechaSalida, 'yyyy-MM-ddT00:00:00', 'en-US');    
+    this._router.navigate(['pago'], {
+      queryParams: {
+        salida: this.salida,
+        llegada: this.llegada,
+        fech: myFecha,
+        clave: this.claveViaje,
+        tarifa: this.tarifa,
+        asientosAdulto: this.asientosAdulto,
+        asientosNinio: this.asientosNinio,
+        asientosInapam: this.asientosInapam
+      }
+    });
   }
 
   vuelveConParametros(){
