@@ -1,56 +1,16 @@
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link navcolor" href="#">Paquetes de diversión <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Paquetes de espectaculos</a>
-        </li>
-        <li class="nav-item letras">
-          <a class="nav-link" href="#">City Tourister</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Renta de autobus/Sprinter</a>
-        </li>
-  
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-  <img src="assets/img/logo.png" alt="Logo">
-  <br>
+<app-navabar-tourister></app-navabar-tourister>
 
 
   <div class="container"> 
-
-    <h2><strong>EL ROLLO</strong></h2>
+    
+     
     <img src="https://www.tourister.com.mx/multimedia/imagenes/destino/26c231947789ce3c276e900df6ec0d092a54707c.jpg" alt="Descargar mapa" class="center">
-
+    
     </div>
+   
     <br>
     <br>
   
-      
-         
-
-  
-
 <div class="container">
   <div class="row">
       
@@ -159,69 +119,65 @@
                 </div>
               </div>
   
-  
-  
             </ng-template>
           </ngb-panel>
         
       </ngb-accordion>
     </div>
     <div class="col">
-      <div class="bg-light text-dark">
-        <div class="row">
-                <h4><strong>Origen</strong></h4>
-              <select class="form-control" title="ORIGEN">
-                <option>Puebla</option>
-                <option>CDMX</option>
-              </select>
+        <div class="d-flex justify-content-center">
+            <div class="card-form">
+                <form class="detalles">
+                  <div class="title">Detalles de compra</div>
+                  <div class="d-flex justify-content-around">
+                      <div class="text">Adulto $375</div>
+                      <div class="text">Niño $365</div>
+                  </div>
+                  <div class="d-flex justify-content-around">
+                    <div class="description">De 13 a 59 años de edad</div>
+                    <div class="description">De 90 a 120 cm de estatura</div>
+                  </div>
+                  <div class="form-body">
+                    <div class="row">
+                      <input class="input" placeholder="Email">
+                      <br>
+                      <input class="input" placeholder="Nombre completo">
+                    </div>
+                    <div class="d-flex justify-content-left row">
+                      <input class="input" placeholder="Total a pagar">
+                    </div>
+                  </div>
+                  <div class="rule"></div>
+                  <div class="form-footer">
+                      <h2 *ngIf="paypalLoad">Cargando...</h2> 
+                      <div id="paypal-button-container" class="text-center"></div>
+                  </div>
+                </form>
+              </div>
               
         </div>
-        <div class="row">
-                <h4><strong>Fecha</strong></h4>
-                <select class="form-control" title="ORIGEN">
-                  <option>Nov 18 </option>
-                  <option>Nov 24</option>
-                </select>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                    <select title="Pick a number" class="seleffctpicker">
-                            <option>Numero de adultos</option>
-                            <option>One</option>
-                            <option>Two</option>
-                            <option>Three</option>
-                          </select>
-
-            </div>
-            <div class="col">
-                    <select title="Pick a number" class="seleffctpicker">
-                            <option>Numero de niños</option>
-                            <option>One</option>
-                            <option>Two</option>
-                            <option>Three</option>
-                          </select>
-
-            </div>
-        </div>
-      </div>
-      <br>
-      <div class="text-center">
-            <button type="button" class="btn btn-danger center-block">Comprar</button>
-    </div>
+       
     </div>
   </div>
+  
 </div>
 
 <br>
 <div class="row">
+    
         <div class="col-6 col-md-4"></div>
+        
         <div class="col-6 col-md-4">
 
                 <div class="map-iframe">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.667492585968!2d-99.1562241!3d18.6340475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf9b80b191584d53c!2sParque+Acu%C3%A1tico+%22El+Rollo%22!5e0!3m2!1ses-419!2smx!4v1490720556018" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>						</div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.667492585968!2d-99.1562241!3d18.6340475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf9b80b191584d53c!2sParque+Acu%C3%A1tico+%22El+Rollo%22!5e0!3m2!1ses-419!2smx!4v1490720556018" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>						
+                      </div>
 
         </div>
         <div class="col-6 col-md-4"></div>
+        
       </div>
-<app-footer></app-footer>
+      <app-footer></app-footer>
+
+
+   
