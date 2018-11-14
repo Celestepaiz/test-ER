@@ -11,6 +11,9 @@ declare let paypal: any;
 
 
 export class RolloComponent implements OnInit {
+  isFirstOpen = true;
+  isCollapsed = false;
+  isCollapsed2 = true;
 
   public beforeChange($event: NgbPanelChangeEvent) {
 
