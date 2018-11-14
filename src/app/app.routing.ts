@@ -10,6 +10,7 @@ import { AsientosComponent } from './asientos/asientos.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import {TouristerComponent} from './tourister/tourister.component';
 import { BoletoComponent} from './boleto/boleto.component';
+import { DetallesComponent} from './detalles/detalles.component'
 import {RolloComponent} from './rollo/rollo.component';
 
 
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
 	{path: 'tourister', component: TouristerComponent},
 	{path: 'landing-page', component: LandingPageComponent},
 	{path: 'boleto', component: BoletoComponent},
+	{path: 'detalles', component: DetallesComponent},
 	{path: 'rollo', component: RolloComponent},
 	{path: '**', pathMatch: 'full', redirectTo: 'landing-page' }
 ];
