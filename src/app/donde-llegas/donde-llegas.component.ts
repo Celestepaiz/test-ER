@@ -32,6 +32,16 @@ export class DondeLlegasComponent implements OnInit {
   public todayDatePuebla = new Date();
   public todayDateMexico = new Date();
 
+  public contadorGeneral: number;
+  public contadorAdultos: number;
+  public contadorNinios: number;
+  public contadorInapam: number;
+
+  public contadorGeneralMexico: number;
+  public contadorAdultosMexico: number;
+  public contadorNiniosMexico: number;
+  public contadorInapamMexico: number;
+
   public todayDatePueblaRegreso = new Date();
   public todayDateMexicoRegreso = new Date();
 
@@ -106,6 +116,15 @@ export class DondeLlegasComponent implements OnInit {
   	ngOnInit() {
       this.getServerStatus();
       this.lockButtons = true;
+      this.contadorGeneral = 0;
+      this.contadorAdultos = 0;
+      this.contadorNinios = 0;
+      this.contadorInapam = 0;
+
+      this.contadorGeneralMexico = 0;
+      this.contadorAdultosMexico = 0;
+      this.contadorNiniosMexico = 0;
+      this.contadorInapamMexico = 0;
     }
 
     getServerStatus(){
@@ -145,6 +164,102 @@ export class DondeLlegasComponent implements OnInit {
           this.alertRegister = '¡Oops! Ocurrió un error en el servidor';
 				}
 			);
+    }
+
+    aumentaAdulto(status: string){
+      if(status == 'menos'){
+        if(this.contadorGeneral > 0 && this.contadorGeneral <= 10 && this.contadorAdultos > 0){
+          this.contadorAdultos--;
+          this.contadorGeneral--;
+        }
+      }
+
+      if(status == 'mas'){
+        if(this.contadorGeneral < 10){
+          this.contadorAdultos++;
+          this.contadorGeneral++;
+        }
+      }      
+    }
+
+    aumentaAdultoMexico(status: string){
+      if(status == 'menos'){
+        if(this.contadorGeneralMexico > 0 && this.contadorGeneralMexico <= 10 && this.contadorAdultosMexico > 0){
+          this.contadorAdultosMexico--;
+          this.contadorGeneralMexico--;
+        }
+      }
+
+      if(status == 'mas'){
+        if(this.contadorGeneralMexico < 10){
+          this.contadorAdultosMexico++;
+          this.contadorGeneralMexico++;
+        }
+      }      
+    }
+
+    aumentaNinio(status: string){
+      if(status == 'menos'){
+        if(this.contadorGeneral > 0 && this.contadorGeneral <= 10 && this.contadorNinios > 0){
+          this.contadorNinios--;
+          this.contadorGeneral--;
+        }
+      }
+
+      if(status == 'mas'){
+        if(this.contadorGeneral < 10){
+          this.contadorNinios++;
+          this.contadorGeneral++;
+        }
+      } 
+    }
+
+    aumentaNinioMexico(status: string){
+      if(status == 'menos'){
+        if(this.contadorGeneralMexico > 0 && this.contadorGeneralMexico <= 10 && this.contadorNiniosMexico > 0){
+          this.contadorNiniosMexico--;
+          this.contadorGeneralMexico--;
+        }
+      }
+
+      if(status == 'mas'){
+        if(this.contadorGeneralMexico < 10){
+          this.contadorNiniosMexico++;
+          this.contadorGeneralMexico++;
+        }
+      }      
+    }
+
+    aumentaInapam(status: string){
+      if(status == 'menos'){
+        if(this.contadorGeneral > 0 && this.contadorGeneral <= 10 && this.contadorInapam > 0){
+          this.contadorInapam--;
+          this.contadorGeneral--;
+        }
+      }
+
+      if(status == 'mas'){
+        if(this.contadorGeneral < 10){
+          this.contadorInapam++;
+          this.contadorGeneral++;
+        }
+      }      
+    }
+
+    aumentaInapamMexico(status: string){
+      if(status == 'menos'){
+        if(this.contadorGeneralMexico > 0 && this.contadorGeneralMexico <= 10 && this.contadorInapamMexico > 0){
+          this.contadorInapamMexico--;
+          this.contadorGeneralMexico--;
+        }
+      }
+
+      if(status == 'mas'){
+        if(this.contadorGeneralMexico < 10){
+          this.contadorInapamMexico++;
+          this.contadorGeneralMexico++;
+        }
+      }      
     }
 
     checkValuesPuebla(){
