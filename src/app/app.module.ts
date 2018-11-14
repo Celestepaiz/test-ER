@@ -30,12 +30,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
-
-
-
-
 import { NavbarPrincipalComponent } from './navbar-principal/navbar-principal.component';
 import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister.component';
+import { DetallesComponent } from './detalles/detalles.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +49,8 @@ import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister
     BoletoComponent,
     RolloComponent,
     NavbarPrincipalComponent,
-    NavabarTouristerComponent
+    NavabarTouristerComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,
