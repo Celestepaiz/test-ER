@@ -1,168 +1,134 @@
 <app-navabar-tourister></app-navabar-tourister>
-
-<div class="row fondoT">
-  <div class="col-sm">
-
-      <div class="card border-danger mb-4">
-          <!--Card image-->
-          <div class="view overlay">
-            <img class="card-img-top" src="https://www.tourister.com.mx/multimedia/imagenes/destino/a98dbb77f8fcc3938817021a7a61f2cbe75fa7d3.png" alt="Card image cap">
-            <a href="#!">
-              <div class="mask rgba-white-slight"></div>
-            </a>
+<div class="container-fluid">
+  <div class="fondo1">
+    <br>
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-xl-4">
+            <div class="thumbnail">
+              <img id="tamanio" src="https://www.tourister.com.mx/multimedia/imagenes/destino/a98dbb77f8fcc3938817021a7a61f2cbe75fa7d3.png">
+              <div class="caption">
+                <h2><strong>EL ROLLO</strong> </h2> 
+                <h3>$530</h3>
+                <p><strong>Tlaquiltenango, Morelos</strong></p>
+                <button [routerLink]="['/rollo']" type="button" class="btn btn-success">QUIERO IR</button>                
+              </div>              
+            </div>            
           </div>
-      
-          <!--Card content-->
-          <div class="card-body">
-      
-            <!--Title-->
-            <h2><strong>EL ROLLO</strong> </h2> 
-            <h3>$530</h3>
-            <!--Text-->
-            <p><strong>Tlaquiltenango, Morelos</strong></p>
-            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-            <button [routerLink]="['/rollo']" type="button" class="btn btn-success">QUIERO IR</button>
+          <div class="col-md-4 col-xl-4">
+            <div class="thumbnail">
+              <img id="tamanio" src="https://www.tourister.com.mx/multimedia/imagenes/destino/c4e498191dcedcf22e340c9ad1d0eb94b8d68077.png">
+              <div class="caption">
+                <h2><strong>VUELO EN GLOBO</strong> </h2>
+                <h3>$2915</h3>
+                <!--Text-->
+                <p><strong>Teotihuacan, CDMX</strong></p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-success">QUIERO IR</button>                
+              </div>              
+            </div>
           </div>
-      
-        </div>
-  </div>
+          <div class="col-md-4 col-xl-4">
+            <div class="thumbnail">
+              <img id="tamanio" src="https://www.tourister.com.mx/multimedia/imagenes/destino/bae759859a145121894844dd7208ff595ec685c8.png">
+              <div class="caption">
+                <h2 class="card-title"><strong>AFRICAN SAFARI</strong> </h2>
+                <h3>$375</h3>
+                <!--Text-->
+                <p class="card-text"><strong>Puebla, Puebla</strong></p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-success">QUIERO IR</button>                
+              </div>              
+            </div>
+          </div>
 
-  <div class="col-sm">
-    <div class="card border-danger mb-4">
+          <div class="col-md-4 col-xl-4">
+            <div class="thumbnail">
+              <img id="tamanio" src="https://www.tourister.com.mx/multimedia/imagenes/destino/8279d52a00acd96234622491453ee41c27238eb4.png">
+              <div class="caption">
+                <h2 class="card-title"><strong>LA VILLA Y CHAPULTEPEC</strong> </h2>
+                <h3>$389</h3>
+                <!--Text-->
+                <p class="card-text"><strong>CDMX</strong></p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-success">QUIERO IR</button>               
+              </div>              
+            </div>            
+          </div>
+          <div class="col-md-4 col-xl-4">
+            <div class="thumbnail">
+              <img id="tamanio" src="https://www.tourister.com.mx/multimedia/imagenes/destino/67ab92000b1ab156e11796b7a9de7d0c0f3ae8ba.jpg">
+              <div class="caption">
+                <h2 class="card-title"><strong>HURRICANE HARBOR</strong> </h2>
+                <h3>$500</h3>
+                <!--Text-->
+                <p class="card-text"><strong>Oaxtepec, Morelos</strong></p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-success">QUIERO IR</button>               
+              </div>              
+            </div>
+          </div>
+          <div class="col-md-4 col-xl-4">
+            <div class="thumbnail">
+              <img id="tamanio" src="https://www.tourister.com.mx/multimedia/imagenes/destino/ee9030ac906d181271fc1aac4cfa570b57084496.jpg">
+              <div class="caption">
+                <h2 class="card-title"><strong>SIX FLAGS FESTIVAL DEL TERROR</strong> </h2>
+                <h3>$849</h3>
+                <!--Text-->
+                <p class="card-text"><strong>CDMX</strong></p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-success">QUIERO IR</button>              
+              </div>              
+            </div>
+          </div>
 
-      <!--Card image-->
-      <div class="view overlay">
-        <img class="card-img-top" src="https://www.tourister.com.mx/multimedia/imagenes/destino/c4e498191dcedcf22e340c9ad1d0eb94b8d68077.png" alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-  
-      <!--Card content-->
-      <div class="card-body">
-  
-        <!--Title-->
-        <h2><strong>VUELO EN GLOBO</strong> </h2>
-        <h3>$2915</h3>
-        <!--Text-->
-        <p><strong>Teotihuacan, CDMX</strong></p>
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-        <button type="button" class="btn btn-success">QUIERO IR</button>
-  
-      </div>
-  
+          <div class="col-md-4 col-xl-4">
+            <div class="thumbnail">
+              <img id="tamanio" src="https://www.tourister.com.mx/multimedia/imagenes/destino/8279d52a00acd96234622491453ee41c27238eb4.png">
+              <div class="caption">
+                <h2 class="card-title"><strong>LA VILLA Y CHAPULTEPEC</strong> </h2>
+                <h3>$389</h3>
+                <!--Text-->
+                <p class="card-text"><strong>CDMX</strong></p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-success">QUIERO IR</button>               
+              </div>              
+            </div>            
+          </div>
+          <div class="col-md-4 col-xl-4">
+            <div class="thumbnail">
+              <img id="tamanio" src="https://www.tourister.com.mx/multimedia/imagenes/destino/67ab92000b1ab156e11796b7a9de7d0c0f3ae8ba.jpg">
+              <div class="caption">
+                <h2 class="card-title"><strong>HURRICANE HARBOR</strong> </h2>
+                <h3>$500</h3>
+                <!--Text-->
+                <p class="card-text"><strong>Oaxtepec, Morelos</strong></p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-success">QUIERO IR</button>               
+              </div>              
+            </div>
+          </div>
+          <div class="col-md-4 col-xl-4">
+            <div class="thumbnail">
+              <img id="tamanio" src="https://www.tourister.com.mx/multimedia/imagenes/destino/ee9030ac906d181271fc1aac4cfa570b57084496.jpg">
+              <div class="caption">
+                <h2 class="card-title"><strong>SIX FLAGS FESTIVAL DEL TERROR</strong> </h2>
+                <h3>$849</h3>
+                <!--Text-->
+                <p class="card-text"><strong>CDMX</strong></p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-success">QUIERO IR</button>              
+              </div>              
+            </div>
+          </div>
+
+        </div>        
+      </div>      
     </div>
-  </div>
-  <div class="col-sm">
-    <div class="card border-danger mb-4">
-
-      <!--Card image-->
-      <div class="view overlay">
-        <img class="card-img-top" src="https://www.tourister.com.mx/multimedia/imagenes/destino/bae759859a145121894844dd7208ff595ec685c8.png" alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-  
-      <!--Card content-->
-      <div class="card-body">
-  
-        <!--Title-->
-        <h2 class="card-title"><strong>AFRICAN SAFARI</strong> </h2>
-        <h3>$375</h3>
-        <!--Text-->
-        <p class="card-text"><strong>Puebla, Puebla</strong></p>
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-        <button type="button" class="btn btn-success">QUIERO IR</button>
-  
-      </div>
-  
-    </div>
+    <br>
   </div>
 </div>
-<br>
-
-<div class="row fondoT">
-  <div class="col-sm">
-    <div class="card border-danger mb-4">
-
-      <!--Card image-->
-      <div class="view overlay">
-        <img class="card-img-top" src="https://www.tourister.com.mx/multimedia/imagenes/destino/8279d52a00acd96234622491453ee41c27238eb4.png" alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-  
-      <!--Card content-->
-      <div class="card-body">
-  
-        <!--Title-->
-        <h2 class="card-title"><strong>LA VILLA Y CHAPULTEPEC</strong> </h2>
-        <h3>$389</h3>
-        <!--Text-->
-        <p class="card-text"><strong>CDMX</strong></p>
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-        <button type="button" class="btn btn-success">QUIERO IR</button>
-  
-      </div>
-  
-    </div>
-  </div>
-  <div class="col-sm">
-    <div class="card border-danger mb-4">
-
-      <!--Card image-->
-      <div class="view overlay">
-        <img class="card-img-top" src="https://www.tourister.com.mx/multimedia/imagenes/destino/67ab92000b1ab156e11796b7a9de7d0c0f3ae8ba.jpg" alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-  
-      <!--Card content-->
-      <div class="card-body">
-  
-        <!--Title-->
-        <h2 class="card-title"><strong>HURRICANE HARBOR</strong> </h2>
-        <h3>$500</h3>
-        <!--Text-->
-        <p class="card-text"><strong>Oaxtepec, Morelos</strong></p>
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-        <button type="button" class="btn btn-success">QUIERO IR</button>
-  
-      </div>
-  
-    </div>
-  </div>
-  <div class="col-sm">
-    <div class="card border-danger mb-4">
-
-      <!--Card image-->
-      <div class="view overlay">
-        <img class="card-img-top" src="https://www.tourister.com.mx/multimedia/imagenes/destino/ee9030ac906d181271fc1aac4cfa570b57084496.jpg" alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-  
-      <!--Card content-->
-      <div class="card-body">
-  
-        <!--Title-->
-        <h2 class="card-title"><strong>SIX FLAGS FESTIVAL DEL TERROR</strong> </h2>
-        <h3>$849</h3>
-        <!--Text-->
-        <p class="card-text"><strong>CDMX</strong></p>
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-        <button type="button" class="btn btn-success">QUIERO IR</button>
-  
-      </div>
-  
-    </div>
-  </div>
-</div>
-
 
 <app-footer-tourister></app-footer-tourister>
 
