@@ -53,11 +53,11 @@
 
         <div class="row">
           <div class="col-md-6 col-xl-6" align="center">
-            <button id="info" type="button" (click)="isCollapsed = !isCollapsed;" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Detalles
+            <button id="info" type="button" (click)="muestraDetalle();" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Detalles
             </button>
           </div>
           <div class="col-md-6 col-xl-6" >
-            <button  id="info2" type="button" (click)="isCollapsed2 = !isCollapsed2;" [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseBasic">Información General
+            <button  id="info2" type="button" (click)="muestraInfo();" [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseBasic">Información General
             </button>
           </div>          
         </div>

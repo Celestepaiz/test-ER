@@ -107,6 +107,7 @@ button#info2 {
 .mapa{
   width: 485px;
   height: 370px;
+  margin-left: -3vw;
 }
 
 }
