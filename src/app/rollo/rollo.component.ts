@@ -11,6 +11,8 @@ declare let paypal: any;
 
 
 export class RolloComponent implements OnInit {
+  isCollapsed = false;
+  isCollapsed2 = true;
 
   public beforeChange($event: NgbPanelChangeEvent) {
 
@@ -76,6 +78,19 @@ export class RolloComponent implements OnInit {
   ngOnInit() {
   }
   
+  muestraDetalle(){
+    if (this.isCollapsed == true && this.isCollapsed2 == false) {
+      this.isCollapsed = false;
+      this.isCollapsed2 = true;
+    }
+  }
+
+  muestraInfo(){
+    if (this.isCollapsed2 == true && this.isCollapsed == false) {
+      this.isCollapsed = true;
+      this.isCollapsed2 = false;
+    }
+  }
 
 
 }

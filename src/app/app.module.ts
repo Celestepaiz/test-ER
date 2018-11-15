@@ -22,6 +22,8 @@ import { FooterComponent } from './components/footer.component';
 
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { TouristerComponent } from './tourister/tourister.component';
 
 import { BoletoComponent } from './boleto/boleto.component';
@@ -64,7 +66,9 @@ import { FooterTouristerComponent } from './footer-tourister/footer-tourister.co
     MatTabsModule,
     NgbModule,
     BsDatepickerModule.forRoot(),
-    BsDropdownModule.forRoot()  
+    BsDropdownModule.forRoot(),
+    AccordionModule.forRoot(),
+    CollapseModule.forRoot()
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent],
