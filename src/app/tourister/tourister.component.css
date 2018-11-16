@@ -23,6 +23,9 @@ img#tamanio{
 }
 
 @media screen and (max-width: 1024px) and (min-width: 700px){
+  .container-fluid{
+    margin-left: -0.7vw;
+  }
 
   img#tamanio{
     width: 28vw;
