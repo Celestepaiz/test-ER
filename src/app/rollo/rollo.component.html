@@ -30,17 +30,17 @@
                   </div>
                   <div class="rule"></div>
                   <div class="form-footer">
-                      <h2 *ngIf="paypalLoad">Cargando...</h2> 
+                      <h2 *ngIf="paypalLoad">Cargando...</h2>
                       <div id="paypal-button-container" class="text-center"></div>
                   </div>
                 </form>
-              </div>              
+              </div>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-xl-5">
         <div class="map-iframe">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.667492585968!2d-99.1562241!3d18.6340475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf9b80b191584d53c!2sParque+Acu%C3%A1tico+%22El+Rollo%22!5e0!3m2!1ses-419!2smx!4v1490720556018" class="mapa" frameborder="0" style="border:0" allowfullscreen></iframe>           
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.667492585968!2d-99.1562241!3d18.6340475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf9b80b191584d53c!2sParque+Acu%C3%A1tico+%22El+Rollo%22!5e0!3m2!1ses-419!2smx!4v1490720556018" class="mapa" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
       <div class="col-md-0 col-xl-1"></div>
@@ -52,14 +52,12 @@
       <div class="col-md-10 col-xl-10">
 
         <div class="row">
-          <div class="col-md-6 col-xl-6" align="center">
-            <button id="info" type="button" (click)="muestraDetalle();" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Detalles
-            </button>
+          <div class="col-md-6 col-xl-6" align="right">
+            <button id="info" type="button" (click)="muestraDetalle();" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Detalles</button>
           </div>
-          <div class="col-md-6 col-xl-6" >
-            <button  id="info2" type="button" (click)="muestraInfo();" [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseBasic">Información General
-            </button>
-          </div>          
+          <div class="col-md-6 col-xl-6"  align="left">
+            <button  id="info2" type="button" (click)="muestraInfo();" [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseBasic">Información General</button>
+          </div>
         </div>
 
       </div>
@@ -74,65 +72,65 @@
         <div class="row">
             <div id="collapseBasic" [collapse]="isCollapsed" class="card card-block card-header">
               <div class="row styleInfo">
-                <div class="col-md-2 col-xl-2">
+                <div class="col-md-2 col-xl-2" style="height:100px;">
                 <i class="fas fa-map-marked-alt fa-4x"></i>
               </div>
-              <div class="col-md-10 col-xl-10">
+              <div class="col-md-10 col-xl-10" style="height:100px;">
                 <h1>UBICACIÓN</h1>
                 <p>Tlaquiltenango, Morelos</p>
               </div>
 
-              <div class="col-md-2 col-xl-2">
+              <div class="col-md-2 col-xl-2" style="height:130px;">
                 <i class="far fa-check-square fa-4x"></i>
               </div>
-              <div class="col-md-10 col-xl-10">
+              <div class="col-md-10 col-xl-10" style="height:130px;">
                 <h1>INCLUYE</h1>
                 <p>Entrada al parque acuático El Rollo (acceso general)
                   <br>Viaje Redondo (ida y vuelta)
                   <br>Seguro de viajero</p>
               </div>
 
-              <div class="col-md-2 col-xl-2">
+              <div class="col-md-2 col-xl-2" style="height:110px;">
                 <i class="far fa-times-circle fa-4x"></i>
               </div>
-              <div class="col-md-10 col-xl-10">
+              <div class="col-md-10 col-xl-10" style="height:110px;">
                 <h1>NO INCLUYE</h1>
                 <p>Servicio dentro de El Rollo con costo adicional: Zona Vip, Ola de surfing, toldos, mesas, lockers y vestidores, alimentos y bebidas.</p>
               </div>
 
-              <div class="col-md-2 col-xl-2">
+              <div class="col-md-2 col-xl-2" style="height:100px;">
                 <i class="fas fa-bus fa-4x"></i>
               </div>
-              <div class="col-md-10 col-xl-10">
+              <div class="col-md-10 col-xl-10" style="height:100px;">
                 <h1>HORA DE SALIDA</h1>
                 <p>07:10 hrs. desde Terminal 4 Pte. Puebla.</p>
               </div>
 
-              <div class="col-md-2 col-xl-2">
+              <div class="col-md-2 col-xl-2" style="height:100px;">
                 <i class="fas fa-bus fa-4x"></i>
               </div>
-              <div class="col-md-10 col-xl-10">
+              <div class="col-md-10 col-xl-10" style="height:100px;">
                 <h1>HORA APROXIMADA DE LLEGADA</h1>
                 <p>21:00 hrs. a Terminal 4 Pte. Puebla.</p>
               </div>
 
-              <div class="col-md-2 col-xl-2">
+              <div class="col-md-2 col-xl-2" style="height:100px;">
                 <i class="fas fa-ticket-alt fa-4x"></i>
               </div>
-              <div class="col-md-10 col-xl-10">
+              <div class="col-md-10 col-xl-10" style="height:100px;">
                 <h1>COSTO</h1>
                 <p>$530 pesos Adulto - $530 pesos niños.</p>
               </div>
 
-              <div class="col-md-2 col-xl-2">
+              <div class="col-md-2 col-xl-2" style="height:100px;">
                 <i class="far fa-clock fa-4x"></i>
               </div>
-              <div class="col-md-10 col-xl-10">
+              <div class="col-md-10 col-xl-10" style="height:100px;">
                 <h1>DURACIÓN</h1>
                 <p>14 hrs</p>
               </div>
               </div>
-            </div>                   
+            </div>
         </div>
 
         <div class="row">
@@ -145,11 +143,11 @@
                 <h1>TOUR</h1>
                 <p>Vive una emocionante experiencia en las atracciones más extremas y de adrenalina.Reta a tus amigos y deslízate en un escalofriante descenso que empieza a 25 metros de altura en el Stuka o si no le tienes miedo a la oscuridad, recorre el Bubbatubo acompañado con tus 4 mejores amigos y sorpréndete. Atracciones familiares en la divertida isla infantil, un diluvio de alegría de emoción o un inolvidable viaje en el Río con Olas donde atravesarás más de 300 metros. ¡Wow!
 
-                EL ROLLO (VILLA) VIP : Entrada a vip tendrá que ser directamente en el parque, esta zona incluye villas de capacidad para 10 personas, estancia ventilada, baño completo con agua caliente, barra, jacuzzi, muebles de jardín, hamaca, camastros y TV.       
+                EL ROLLO (VILLA) VIP : Entrada a vip tendrá que ser directamente en el parque, esta zona incluye villas de capacidad para 10 personas, estancia ventilada, baño completo con agua caliente, barra, jacuzzi, muebles de jardín, hamaca, camastros y TV.
                 </p>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
 
       </div>
@@ -161,6 +159,3 @@
   </div>
 </div>
 <app-footer-tourister></app-footer-tourister>
-
-
-   

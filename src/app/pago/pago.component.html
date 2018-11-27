@@ -8,7 +8,7 @@
           <button (click)='vuelveConParametros()' type="button" class="btn btn-primary btn-lg">Regresar</button>
           <br><br><br>
       </div>
-  
+
       <div class="col-md-6 text-center">
           <br><br>
           <button [routerLink]="['/donde-llegas']" type="button" class="btn btn-danger btn-lg">Salir</button>
@@ -104,11 +104,11 @@
     <div class="container box text-center" style="width:700px; margin:0 auto; border:1px solid #cecece;">
         <h5>Pago</h5>
         <br>
-        <h6>Paga y recibe tu boleto en tu correo electrónico</h6>\
-        <h2 *ngIf="paypalLoad">Cargando...</h2> 
+        <h6>Paga y recibe tu boleto en tu correo electrónico</h6><br>
+        <h2 *ngIf="paypalLoad">Cargando...</h2>
           <div id="paypal-button-container" class="text-center"></div>
     </div>
+    <br><br>
   </section>
 </div>
-<br>
 <app-footer></app-footer>

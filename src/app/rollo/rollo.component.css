@@ -20,8 +20,8 @@
 button#info {
   margin: 0.3vw;
   width: 13.5vw;
+  text-align: center;
   color: #17a0db;
-  padding: 5px 35px 5px 5px;
   font-size: 14px;
   border: 1px solid #ccc;
   height: 34px;
@@ -30,14 +30,15 @@ button#info {
   appearance: none;
   background-color: white;
   cursor: pointer;
-  border-radius: 8px
+  border-radius: 8px;
+
 }
 
 button#info2 {
   margin: 0.3vw;
   width: 13.5vw;
+  text-align: center;
   color: #17a0db;
-  padding: 5px 35px 5px 5px;
   font-size: 14px;
   border: 1px solid #ccc;
   height: 34px;
@@ -46,12 +47,13 @@ button#info2 {
   appearance: none;
   background-color: white;
   cursor: pointer;
-  border-radius: 8px
+  border-radius: 8px;
 }
 
 
 .styleInfo{
   background-color: white;
+  border-radius: 8px;
   color: black;
   margin-left: -1vw;
 }
@@ -121,7 +123,7 @@ body{
     color: white;
     letter-spacing: 1px;
   }
-  
+
   .card-form{
     width: 500px;
     border-radius: 10px;
@@ -140,7 +142,7 @@ body{
       background: #1d4ab8 !important;
       border-radius: 10px 10px 0 0;
     }
-    
+
     .form-body{
       padding: 10px;
     }
@@ -162,17 +164,17 @@ body{
           color: #576366;
           font-size: 14px;
         }
-  
+
     .rule{
       height: 2px;
       background: #e8ebed;
       margin: 0px 35px;
     }
-    
+
     .form-footer{
       margin: 0 25px 15px 25px;
       padding: 15px 10px;}
-  
+
    .button{
       width: 40%;
       display: inline-block;
@@ -205,13 +207,13 @@ body{
     padding-left: 0px;
     margin-left: 0px;
    }
-     
-  
+
+
    .fondoT{
-   
+
     background-image: url(/assets/img/fontoTourister.png);
     background-position: center center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-attachment: relative;
     height: 100vh;
     width: 100vw;
@@ -219,7 +221,7 @@ body{
   }
 
   .titulo{
-    background: #000; 
+    background: #000;
     opacity: .50;
     font-size: 85px;
     letter-spacing: 2px;
