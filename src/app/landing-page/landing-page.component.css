@@ -8,14 +8,14 @@
     background-color: #000000;
     z-index: 9999999;
   }
-  
+
   .loading-container2 .loading-logo {
     position: absolute;
     top: 25vh;
     left: 50vh;
     transform: translateX(-50%);
   }
-  
+
   .loading-container2 .pulse {
     border: 3px solid #148abd;
     height: 30px;
@@ -32,7 +32,7 @@
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
-  
+
   @keyframes pulsate {
     0% {
       transform: scale(0.1, 0.1);
@@ -46,7 +46,7 @@
       opacity: 0.0;
     }
   }
-  
+
   /*Fondo de rayas*/
   .fondo1{
     margin-left: -15px;
@@ -58,7 +58,7 @@
     background-size: cover;
     overflow: hidden;
   }
-  
+
   /* Clase que llama al fondo de la izquierda*/
   .portadaIzquierda {
     position: relative;
@@ -76,7 +76,7 @@
     vertical-align: bottom;
     font-size: 50px;
   }
-  
+
   /* Clase que llama al fondo derecho*/
   .portadaDerecha {
     position: relative;
@@ -93,9 +93,9 @@
     background-position: left bottom;
     vertical-align: bottom;
     font-size: 50px;
-  
+
   }
-  
+
   .btn1 {
     position: relative;
     border: none;
@@ -103,7 +103,7 @@
     color: #f2f2f2;
     padding: 0.5em;
     font-size: 0.5em;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     border-radius: 5px;
     box-sizing: border-box;
     transition: all 500ms ease;
@@ -112,13 +112,22 @@
     margin-right: auto;
     margin-top: 50vh;
     width: 300px;
-    font-family: sans-serif;
+    font-family: inherit;
     overflow: hidden;
-    
-  
+    border-radius: 0.4rem;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
+
   }
-  
-  
+
+  .btn1 .text{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+  }
 
   .btn2 {
     position: relative;
@@ -127,7 +136,7 @@
     color: #f2f2f2;
     padding: 0.5em;
     font-size: 0.5em;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     border-radius: 5px;
     box-sizing: border-box;
     transition: all 500ms ease;
@@ -136,40 +145,49 @@
     margin-right: auto;
     margin-top: 50vh;
     width: 300px;
-    font-family: sans-serif;
+    font-family: inherit;
     overflow: hidden;
-    
-  
+    border-radius: 0.4rem;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
+
   }
-  
-  
+
+  .btn2 .text{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+  }
+
 
   .titulo{
-    background: #000; 
+    background: #000;
+    height: 130px;
     opacity: .50;
-    font-size: 85px;
-    letter-spacing: 2px;
     text-align: center;
     margin-top: -83vh;
     margin-bottom: 93vh;
-    font-family: Myriad Pro Regular;
+    font-family: sans-serif;
     overflow: hidden;
     color: white;
   }
   .titulo h1{
     color: white;
-    letter-spacing: 0.5em;
-    font-size: 0.5em;
+    margin-top: .5em;
+    font-size: 4em;
     overflow: hidden;
   }
-  
+
   .titulo p{
     color: white;
     letter-spacing: 0.2em;
     font-size: 0.4em;
     overflow: hidden;
   }
-  
+
   .modal-contenido{
     background:  linear-gradient(to right, black 1%, black 93%, rgba(0, 0, 0, 0) 100%);
     width: 60vw;
@@ -183,12 +201,12 @@
     transition: all 500ms ease;
     border: none;
   }
-  
+
   #miModal:target{
     opacity:1;
     pointer-events:auto;
   }
-  
+
   .sencillo{
     background-image: url("/assets/img/viajesencillo.png");
     background-repeat: no-repeat;
@@ -198,12 +216,12 @@
     outline: none;
     border: none !important;
   }
-  
+
   .sencilloDiv{
     text-align: center;
     color: white;
   }
-  
+
   .redondo{
     background-image: url("/assets/img/viajeredondo-off.png");
     background-repeat: no-repeat;
@@ -213,16 +231,16 @@
     outline: none;
     border: none !important;
   }
-  
+
   .redondoDiv{
     text-align: center;
     color: white;
   }
-  
+
   label{
     color: white;
   }
-  
+
   .llenado{
     text-align: center;
   }
@@ -236,12 +254,12 @@
     text-shadow: 0 1px 0 #fff;
     opacity: .5;
   }
-  
+
   .divViaje{
     text-align: center;
     font-size: 40px;
   }
-  
+
   .btnViaje {
     background-color: #17a0db;
     color: white;
@@ -252,8 +270,8 @@
     font-family: sans-serif;
     padding: 6px 12px;
   }
-  
-  
+
+
   select#viaje {
     margin: 0.3vw;
     width: 33vh;
@@ -267,13 +285,13 @@
     appearance: none;
     background: url("/assets/img/down-arrow.png") 96% / 15% no-repeat #eee;
   }
-  
-  
+
+
   /* CAUTION: IE hackery ahead */
   select#viaje::-ms-expand {
       display: none; /* remove default arrow on ie10 and ie11 */
   }
-  
+
   /* target Internet Explorer 9 to undo the custom arrow */
   @media screen and (min-width:0\0) {
       select#viaje {
@@ -284,7 +302,7 @@
   p{
     color: white;
   }
-  
+
   input#viaje {
     margin: 0.3vw;
     width: 33vh;
@@ -297,4 +315,3 @@
     -moz-appearance: none;
     appearance: none;
   }
-  

@@ -9,7 +9,6 @@
 
 .container{
   background-color: white;
-
 }
 
 .thumbnail{
@@ -17,9 +16,53 @@
   margin-bottom: 5px;
 }
 
+.thumbnail .p{
+  margin-top: 5px;
+  line-height: 20px;
+}
+
+.thumbnail .p2{
+  font-size: 2em;
+}
+
 img#tamanio{
-  width: 22.8vw;
-  height: 30vh;
+  align: center;
+  width: 100%;
+  height: 100%;
+}
+
+img#tamanioTurister{
+  width: 100%;
+  height: 100%;
+  align: center;
+}
+
+
+h2{
+  font-family: "Raleway",sans-serif;
+  font-size: 2.5em;
+  position: relative;
+  line-height: 1.1;
+  color: #1d4ab8;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.btn{
+  position: inherit;
+  background-color: #cc0033;
+  border: none;
+  color: #f2f2f2;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+  font-family: inherit;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (max-width: 1024px) and (min-width: 700px){
