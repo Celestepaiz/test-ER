@@ -18,6 +18,7 @@ cache:
     - node_modules
 
 script:
+  - npm i npm@latest -g
   - ng build --prod
 
 
