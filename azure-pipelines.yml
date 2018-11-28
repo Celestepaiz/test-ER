@@ -12,8 +12,7 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install -g @angular/cli@6.0.8
+- script: |    
     npm install
     ng build --prod
   displayName: 'npm install and build'
