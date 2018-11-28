@@ -1,0 +1,157 @@
+<app-navbar></app-navbar>
+<div id="container" class="fondo1">
+  <header></header>
+
+  <div class="row">
+      <div class="col-md-6 text-center">
+          <br><br>
+          <button (click)='vuelveConParametros()' type="button" class="btn btn-primary btn-lg">Regresar</button>
+          <br><br><br>
+      </div>
+  
+      <div class="col-md-6 text-center">
+          <br><br>
+          <button [routerLink]="['/donde-llegas']" type="button" class="btn btn-danger btn-lg">Salir</button>
+          <br><br><br>
+      </div>
+  </div>
+
+
+  <section class="formulario">
+    <br>
+    <h3>Llena tus datos</h3><br>
+    <form>
+    <div class="container box">
+      <table>
+        <tr>
+          <th>
+              Nombre(s):
+          </th>
+          <th>
+              Apellidos:
+          </th>
+          <th>
+              Correo electrónico:
+          </th>
+        </tr>
+
+        <tr>
+          <th>
+              <input type = "text" [formControl]="name" style="width:250px; height: 40px; margin:0 auto;">
+          </th>
+          <th>
+              <input type = "text" [formControl]="lastName" style="width:250px; height: 40px; margin:0 auto;">
+          </th>
+          <th>
+              <input type = "text" [formControl]="email" style="width:250px; height: 40px; margin:0 auto;" placeholder="ejemplo@ejemplo.com">
+          </th>
+        </tr>
+      </table>
+    </div>
+  </form>
+    <br>
+    <div class="fondo1 text-center">
+      <div class="card-header">
+        Estrella Roja
+      </div>
+      <!-- Informacion boleto de ida-->
+      <div class="event">
+        <div class="event-side">
+          <div class="cut-out"></div>
+        </div>
+        <div class="event-body">
+          <div class="boleto black">
+            Boleto Ida
+          </div>
+          <div class="fecha">
+            <h5>{{ today | date:'short' }}</h5>
+          </div>
+          <div class="cliente">
+            Nombre: {{ name.value }} {{ lastName.value}}
+          </div>
+          <div class="cliente">
+            Email: {{ email.value }}
+          </div>
+          <div class="origen-destino txt-blue">
+            PUE - AEROPUERTO
+          </div>
+          <div class="d-flex justify-content-around">
+            <div class="tarifa-asiento d-flex justify-content-around">
+              <h6 class="dark-blue">Tarifa:</h6>
+              <h6 class="dark-blue">$300</h6>
+            </div>
+            <div class="tarifa-asiento d-flex justify-content-around">
+              <h6 class="dark-blue">Descuento:</h6>
+              <h6 class="dark-blue">$0</h6>
+            </div>
+            <div class="tarifa-asiento d-flex justify-content-around">
+              <h6 class="dark-blue">Total:</h6>
+              <h6 class="dark-blue">$0</h6>
+            </div>
+          </div>
+          <div class="tarifa-asiento d-flex justify-content-around">
+            <h6 class="dark-blue">Asiento:</h6>
+            <h6 class="dark-blue">20</h6>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <br><br><br>
+      <!--Informacion boleto de regreso-->
+      <div class="event">
+        <div class="event-side">
+          <div class="cut-out"></div>
+        </div>
+        <div class="event-body">
+          <div class="boleto black">
+            Boleto Regreso
+          </div>
+          <div class="fecha">
+            <h5>{{ today | date:'short' }}</h5>
+          </div>
+          <div class="cliente">
+            Nombre: {{ name.value }} {{ lastName.value}}
+          </div>
+          <div class="cliente">
+            Email: {{ email.value }}
+          </div>
+          <div class="origen-destino txt-blue">
+            PUE - AEROPUERTO
+          </div>
+          <div class="d-flex justify-content-around">
+            <div class="tarifa-asiento d-flex justify-content-around">
+              <h6 class="dark-blue">Tarifa:</h6>
+              <h6 class="dark-blue">$300</h6>
+            </div>
+            <div class="tarifa-asiento d-flex justify-content-around">
+              <h6 class="dark-blue">Descuento:</h6>
+              <h6 class="dark-blue">$0</h6>
+            </div>
+            <div class="tarifa-asiento d-flex justify-content-around">
+              <h6 class="dark-blue">Total:</h6>
+              <h6 class="dark-blue">$0</h6>
+            </div>
+          </div>
+          <div class="tarifa-asiento d-flex justify-content-around">
+            <h6 class="dark-blue">Asiento:</h6>
+            <h6 class="dark-blue">20</h6>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        Aeropuerto
+      </div>
+    </div>
+    <br>
+    <div class="container box text-center" style="width:700px; margin:0 auto; border:1px solid #cecece;">
+        <h5>Pago</h5>
+        <br>
+        <h6>Paga y recibe tu boleto en tu correo electrónico</h6>\
+        <h2 *ngIf="paypalLoad">Cargando...</h2> 
+          <div id="paypal-button-container" class="text-center"></div>
+    </div>
+  </section>
+</div>
+<br>
+<app-footer></app-footer>
