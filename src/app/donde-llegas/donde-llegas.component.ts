@@ -277,13 +277,13 @@ export class DondeLlegasComponent implements OnInit {
               if(this.contadorAdultos == 0 && this.contadorNinios == 0 && this.contadorInapam == 0){
                 this.alertRegister = 'Selecciona el número de asientos';
               }else{
-                this.alertRegister = null;  // Aqui todo esta bien en el viaje redondo
+                this.alertRegister = null;  // Aqui todo esta bien en el viaje redondo                
                 this._router.navigate(['list'], {
                   queryParams: {
                     salida: this.selectedValuePueblaDondeSales,
                     llegada: this.selectedValuePueblaDondeLlegas,
-                    fech: this.todayDatePuebla,
-                    fecReg: this.todayDatePueblaRegreso,
+                    fech: this.bsRangeValue[0],
+                    fecReg: this.bsRangeValue[1],
                     asientosAdulto: this.contadorAdultos,
                     asientosNinio: this.contadorNinios,
                     asientosInapam: this.contadorInapam
@@ -336,8 +336,8 @@ export class DondeLlegasComponent implements OnInit {
                   queryParams: {
                     salida: this.selectedValueMexicoDondeSales,
                     llegada: this.selectedValueMexicoDondeLlegas,
-                    fech: this.todayDateMexico,
-                    fecReg: this.todayDateMexicoRegreso,
+                    fech: this.bsRangeValue[0],
+                    fecReg: this.bsRangeValue[1],
                     asientosAdulto: this.contadorAdultosMexico,
                     asientosNinio: this.contadorNiniosMexico,
                     asientosInapam: this.contadorInapamMexico
