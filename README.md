@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/Celestepaiz/test-ER.svg?branch=master)](https://travis-ci.org/Celestepaiz/test-ER)
-
 
 #Set Project
 #First Install packages
