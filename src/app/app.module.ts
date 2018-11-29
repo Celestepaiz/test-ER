@@ -36,6 +36,7 @@ import { NavbarPrincipalComponent } from './navbar-principal/navbar-principal.co
 import { NavabarTouristerComponent } from './navabar-tourister/navabar-tourister.component';
 import { DetallesComponent } from './detalles/detalles.component';
 import { FooterTouristerComponent } from './footer-tourister/footer-tourister.component';
+import { PagoRegresoComponent } from './pago-regreso/pago-regreso.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { FooterTouristerComponent } from './footer-tourister/footer-tourister.co
     NavbarPrincipalComponent,
     NavabarTouristerComponent,
     DetallesComponent,
-    FooterTouristerComponent
+    FooterTouristerComponent,
+    PagoRegresoComponent
   ],
   imports: [
     BrowserModule,

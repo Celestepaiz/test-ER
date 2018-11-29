@@ -12,6 +12,7 @@ import {TouristerComponent} from './tourister/tourister.component';
 import { BoletoComponent} from './boleto/boleto.component';
 import { DetallesComponent} from './detalles/detalles.component'
 import {RolloComponent} from './rollo/rollo.component';
+import { PagoRegresoComponent } from './pago-regreso/pago-regreso.component';
 
 
 //Estas son las rutas de nuestro proyecto que agregaremos poco a poco
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
 	{path: 'boleto', component: BoletoComponent},
 	{path: 'detalles', component: DetallesComponent},
 	{path: 'rollo', component: RolloComponent},
+	{path: 'pagoIdaVuelta', component: PagoRegresoComponent},
 	{path: '**', pathMatch: 'full', redirectTo: 'landing-page' }
 ];
 
